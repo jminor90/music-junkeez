@@ -1,14 +1,13 @@
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import AppContainer from "./components/containers/AppContainer";
 import IndividualThread from "./pages/IndividualThread";
+import Homepage from "./pages/Homepage";
 import Profile from "./pages/Profile";
 import Genre from "./pages/Genre";
 import OffTopic from "./pages/OffTopic";
 import GeneralDiscussion from "./pages/GeneralDiscussion";
-
-
 
 function App() {
   return (
