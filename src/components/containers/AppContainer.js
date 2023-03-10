@@ -1,9 +1,15 @@
+import { Outlet } from 'react-router-dom';
+import Navbar from "../Navbar"
+import Footer from "../Footer"
+
 function AppContainer() {
 
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <>
+            <Navbar />
+            <Outlet />
+            <Footer />
+        </>
     );
 }
 

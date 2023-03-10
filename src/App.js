@@ -14,13 +14,13 @@ function App() {
     <div className='App'>
 
       <Routes>
-            <Route path="/music-junkeez" element={<AppContainer />}>
+            <Route path="" element={<AppContainer />}>
               <Route index element={<Homepage />} />
-              <Route path="/music-junkeez/genres" element={<Genre />} />
-              <Route path="/music-junkeez/off-topic" element={<OffTopic />} />
-              <Route path="/music-junkeez/general-discussion" element={<GeneralDiscussion />} />
-              <Route path="/music-junkeez/:individualThreadId" element={<IndividualThread />} />
-              <Route path="/music-junkeez/:username" element={<Profile />} />
+              <Route path="/genres" element={<Genre />} />
+              <Route path="/off-topic" element={<OffTopic />} />
+              <Route path="/general-discussion" element={<GeneralDiscussion />} />
+              <Route path="/:individualThreadId" element={<IndividualThread />} />
+              <Route path="/:username" element={<Profile />} />
             </Route>
       </Routes>
 
