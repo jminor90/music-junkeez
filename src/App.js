@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+
+import AppContainer from "./components/containers/AppContainer";
+import IndividualThread from "./pages/IndividualThread";
+import Profile from "./pages/Profile";
+import Genre from "./pages/Genre";
+import OffTopic from "./pages/OffTopic";
+import GeneralDiscussion from "./pages/GeneralDiscussion";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+
+      <Routes>
+            <Route path="/music-junkeez" element={<AppContainer />}>
+              <Route index element={<Homepage />} />
+              <Route path="/music-junkeez/genres" element={<Genre />} />
+              <Route path="/music-junkeez/off-topic" element={<OffTopic />} />
+              <Route path="/music-junkeez/general-discussion" element={<GeneralDiscussion />} />
+              <Route path="/music-junkeez/:individualThreadId" element={<IndividualThread />} />
+              <Route path="/music-junkeez/:username" element={<Profile />} />
+            </Route>
+      </Routes>
+
     </div>
   );
 }
