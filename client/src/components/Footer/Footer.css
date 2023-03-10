@@ -1,0 +1,16 @@
+.footerContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    font-size: 22px;
+    color: rgb(113, 36, 202);
+}
+
+h6 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
