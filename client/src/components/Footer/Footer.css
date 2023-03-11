@@ -4,13 +4,13 @@
     width: 100%;
 }
 
-a {
+.footerIcon {
     font-size: 22px;
-    color: rgb(113, 36, 202);
+    color: #8A00FF;
 }
 
-h6 {
-    font-size: 12px;
+.footerText {
+    font-size: 14px;
     margin-bottom: 5px;
     margin-top: 3px;
 }

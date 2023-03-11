@@ -1,35 +1,36 @@
-
-<<<<<<< HEAD:client/src/components/Navbar/Navbar.js
-    return (
-        <>
-            <h1>Navbar</h1>
-        </>
-    );
-}
-=======
-
+import { FaSearch } from 'react-icons/fa';
+import "./Navbar.css";
 
         function Navbar() {
 
             return (
                 <nav className="navbar bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"></img>
-                    Bootstrap
-                    </a>
-                        <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-        
-                        <h2>Sign In</h2>
+                <div className="container-fluid navContainer">
+
+                    <img src={require("../../assets/images/MusicJunkeez.png")} alt="Logo" className="navImg"></img>
+                    <img src={require("../../assets/images/MusicJunkeezShort.png")} alt="Logo" className="navImg2"></img>
+
+                    <form className="content" role="search">
+                        <div className='search-bar'>
+
+                            <input className="search-bar__input" type="text" placeholder="Search" aria-label="Search"></input>
+
+                            <button className="search-bar__submit" type="submit">
+                                <FaSearch className='FaSearch'/>
+                            </button>
+
+                            </div>
+                    </form>
+
+                    <div className="d-flex loginContainer">
+                        <button className="signupBtn">Signup</button>
+                        <h6 className="loginh6">OR</h6>
+                        <button className="loginBtn">Login</button>
+                    </div>
+
                 </div>
-        
                 </nav>
             );
         }
-
->>>>>>> fe9b2c13a5ae586edf0559def3f40a2ed9256216:client/src/components/Navbar.js
 
 export default Navbar;
