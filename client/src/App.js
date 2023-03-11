@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='App'>
 
-      <Routes>
+      <Routes >
             <Route path="" element={<AppContainer />}>
               <Route index element={<Homepage />} />
               <Route path="/genres" element={<Genre />} />

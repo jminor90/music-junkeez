@@ -1,0 +1,16 @@
+.footerContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerIcon {
+    font-size: 22px;
+    color: #8A00FF;
+}
+
+.footerText {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
