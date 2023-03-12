@@ -1,4 +1,5 @@
 import { FaSearch } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 import "./Navbar.css";
 
         function Navbar() {
@@ -13,7 +14,7 @@ import "./Navbar.css";
                     <form className="content" role="search">
                         <div className='search-bar'>
 
-                            <input className="search-bar__input" type="text" placeholder="Search" aria-label="Search"></input>
+                            <input className="search-bar__input" type="text" placeholder="Search for forums, genres or users" aria-label="Search"></input>
 
                             <button className="search-bar__submit" type="submit">
                                 <FaSearch className='FaSearch'/>
@@ -22,10 +23,10 @@ import "./Navbar.css";
                             </div>
                     </form>
 
-                    <div className="d-flex loginContainer">
-                        <button className="signupBtn">Signup</button>
-                        <h6 className="loginh6">OR</h6>
-                        <button className="loginBtn">Login</button>
+                    <div className="d-flex signinContainer">
+                    <Link to="/signin">
+                        <button className="signinBtn">Signup/Sign in</button>
+                        </Link>
                     </div>
 
                 </div>
