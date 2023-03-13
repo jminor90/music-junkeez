@@ -1,6 +1,6 @@
 nav {
-    background: linear-gradient(to right, #4d4d4d 0%, #8a8a8a 100%)!important;
-    border-bottom: 2px solid #8A00FF;
+    background: linear-gradient(to bottom, #303030 0%, #161616 100%)!important;
+    border-bottom: 2px solid rgb(224, 52, 152);
     height: 95px;
 }
 
@@ -44,20 +44,25 @@ nav {
     width: 100%;
     border-radius: 20px !important;
     background: rgb(224, 224, 224);
+    outline: 0;
 }
 
 .search-bar__input:focus {
     padding: 0 0.5em;
     width: 100%;
-    border-radius: 20px !important;
+    border: 1px solid rgb(224, 52, 152);
 }
 
 .search-bar__submit {
     font-size: 17px;
     color: whitesmoke;
-    background: #8A00FF;
+    background: linear-gradient(
+        35deg,
+        #be00e4 20%,
+        rgb(224, 150, 52) 100%
+      );
     font-weight: bold;
-    border: 2px solid black;
+    border: 1px solid white;
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -65,52 +70,46 @@ nav {
     cursor: pointer;
 }
 
-.search-bar__submit:hover {
-    transition: all ease-in .2s;
-    color: #8A00FF;
-    background-color: rgb(27, 27, 27);
-    border: #8A00FF 2px solid;
+.search-bar__submit:focus {
+    transform: scale(0.9,0.9);
 }
 
-.signupBtn {
-    margin-top: 10px;
-    background: transparent;
-    border: none;
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.signupBtn:hover {
-    color: #8A00FF;
-}
-
-.loginBtn {
-    padding-left: 25px;
-    padding-right: 25px;
+.signinBtn {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: whitesmoke;
-    background: #8A00FF;
-    font-weight: bold;
+    background: linear-gradient(
+        25deg,
+        #bf09c5 20%,
+        rgb(224, 150, 52) 100%
+      );
+    font-weight: 600;
     border-radius: 20px;
-    border: 2px solid black;
     margin-right: 25px;
     cursor: pointer;
+    font-size: 15px;
+    border: none;
+    position: relative;
+    z-index: 10;
 }
 
-.loginBtn:hover {
-    transition: all ease-in .2s;
-    color: #8A00FF;
-    background-color: rgb(27, 27, 27);
-    border: #8A00FF 2px solid;
+.signinBtn:hover {
+    text-decoration: underline;
 }
 
-.loginContainer {
+.signinBtn:focus {
+    transition: all ease-in .1s;
+    transform: scale(0.95,0.95);
+}
+
+.signinContainer {
     position: relative;
     z-index: 1;
 }
 
-.loginh6 {
+.signinh6 {
     font-weight: bold;
     color: white;
     margin-top: 17px;
@@ -130,7 +129,7 @@ nav {
 }
 
 @media (max-width: 1000px) {
-    .loginBtn {
+    .signinBtn {
         margin-right: 0px;
     }
     .navImg {
@@ -146,105 +145,115 @@ nav {
         height: 75px;
     }
     .navImg2 {
-        height: 55px;
+        height: 50px;
         position: fixed;
-        left: 44%;
-        right: 56%;
+        left: 45%;
+        right: 55%;
     }
-    .loginBtn {
+    .signinBtn {
         padding-left: 15px;
         padding-right: 15px;
         color: whitesmoke;
-        background: #8A00FF;
-        font-weight: bold;
         border-radius: 20px;
-        border: 2px solid black;
-        margin-right: 7px;
+        margin-right: 15px;
+        position: relative;
+        z-index: 1;
     }
-    .loginContainer {
+    .signinContainer {
         position: fixed;
         right: 0;
-    }
-    .signupBtn {
-        margin-top: 0px;
+        z-index: 2;
     }
     .content {
         display: block;
-        position: absolute;
         top: -10px;
         left: 2%;
-        width: 96%;
+        width: 95%;
+        position: absolute;
+        z-index: 13;
     }
-    .loginh6 {
+    .signinh6 {
         font-size: 12px;
         margin-top: 7px;
     }
     .search-bar {
         display: flex;
         border-radius: 500px;
-        border: 2px solid rgb(0, 0, 0);
         width: 44px;
-        background: black;
-        position: relative;
-        transition: width 300ms ease-in-out;
+        padding: 1px;
+        background: rgb(255, 255, 255);
+        transition: width 350ms cubic-bezier(0.18, 0.89, 0.32, 1.08);
         overflow: hidden;
+        position: relative;
+        z-index: 3;
     }
     .search-bar__input {
-        color: white;
         flex-grow: 1;
         font-size: 14px;
         padding: 0 0.5em;
-        position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
         line-height: 16px;
         opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        z-index: 4;
+        opacity: 1;
+        background-color: transparent;
     }
     .search-bar__submit {
         color: rgb(255, 255, 255);
         font-size: 19px;
         margin-left: auto;
         border: transparent;
+        position: relative;
+        z-index: 4;
+    }
+    .search-bar__submit:hover {
+        outline: 0;
+        box-shadow: 0 0 10px black;
+    }
+    .search-bar__submit:focus {
+        outline: 0;
+        box-shadow: 0 0 10px black;
     }
     .search-bar:focus-within {
-        width: 100%;
+        width: 101%;
     }
     .search-bar__input:focus-within {
         opacity: 1;
         width: 100%;
         background-color: transparent;
         border: 2px transparent;
+        cursor: initial;
     }
 }
 
 @media (max-width: 700px) {
+    .navImg2 {
+        left: 44%;
+        right: 56%;
+    }
+}
+
+@media (max-width: 650px) {
     .navImg2 {
         left: 43%;
         right: 57%;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
     .navImg2 {
         left: 42%;
         right: 58%;
-    }
-    .signupBtn {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 550px) {
-    .navImg2 {
-        left: 41%;
-        right: 57%;
     }
 }
 
 @media (max-width: 470px) {
     .navImg2 {
-        left: 40%;
-        right: 60%;
+        left: 41%;
+        right: 59%;
     }
 }

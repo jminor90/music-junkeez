@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Genre from "./pages/Genre";
 import OffTopic from "./pages/OffTopic";
 import GeneralDiscussion from "./pages/GeneralDiscussion";
+import { AccountBox } from "./components/accountBox";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes >
             <Route path="" element={<AppContainer />}>
               <Route index element={<Homepage />} />
+              <Route path="/signin" element={<AccountBox />} />
               <Route path="/genres" element={<Genre />} />
               <Route path="/off-topic" element={<OffTopic />} />
               <Route path="/general-discussion" element={<GeneralDiscussion />} />
