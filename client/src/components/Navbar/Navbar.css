@@ -170,7 +170,7 @@ nav {
         left: 2%;
         width: 95%;
         position: absolute;
-        z-index: 13;
+        z-index: 6;
     }
     .signinh6 {
         font-size: 12px;
@@ -199,8 +199,6 @@ nav {
         cursor: pointer;
         position: absolute;
         z-index: 4;
-        opacity: 1;
-        background-color: transparent;
     }
     .search-bar__submit {
         color: rgb(255, 255, 255);
@@ -208,7 +206,7 @@ nav {
         margin-left: auto;
         border: transparent;
         position: relative;
-        z-index: 4;
+        z-index: 2;
     }
     .search-bar__submit:hover {
         outline: 0;

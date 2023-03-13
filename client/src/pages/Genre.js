@@ -1,10 +1,12 @@
-function Genre() {
+import GenreComponent from '../components/Genre/Genre';
+
+function GenrePage() {
 
     return (
         <div>
-            <h1>Genre</h1>
+            <GenreComponent />
         </div>
     );
 }
 
-export default Genre;
+export default GenrePage;

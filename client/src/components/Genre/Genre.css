@@ -1,0 +1,68 @@
+.genreContainer {
+    position: relative;
+    margin-top: 150px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    display: flex;
+}
+
+.threadContainer {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 40px;
+    height: 100px;
+}
+
+.smallText p {
+    position: absolute;
+    left: 30px;
+    top: 8px;
+    font-size: 13px;
+}
+
+.smallText h5 {
+    position: absolute;
+    left: 30px;
+    top: 36px;
+    font-size: 16px;
+}
+
+.smallText h6 {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    font-size: 13px;
+}
+
+.commentButton {
+    color: rgb(224, 52, 152);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+}
+
+.thumbContainer {
+    width: 80px;
+    display: grid;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.thumbButton {
+    border: none;
+    background: transparent;
+    color: rgb(224, 52, 152);
+}
+
+.thumbsDown {
+    font-size: 28px;
+    color: rgb(224, 52, 152);
+}
+
+.thumbsUp {
+    font-size: 28px;
+    color: rgb(224, 52, 152);
+}
