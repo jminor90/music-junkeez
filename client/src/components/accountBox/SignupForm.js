@@ -1,8 +1,16 @@
-import React, { useContext } from "react";
-import {  BoxContainer } from "./common";
+import { useContext } from "react";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
+import styled from "styled-components";
 import "./form.css";
+
+export const BoxContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+`;
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
@@ -11,8 +19,8 @@ export function SignupForm(props) {
     <BoxContainer>
       <form className="formContainer">
         <input className="input" type="username" placeholder="Username" />
-        <input className="input" type="text" placeholder="Full Name" />
         <input className="input" type="email" placeholder="Email" />
+        <input className="input" type="text" placeholder="Full Name" />
         <input className="input" type="password" placeholder="Password" />
         <input className="input" type="password" placeholder="Confirm Password" />
       </form>

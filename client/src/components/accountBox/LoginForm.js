@@ -1,8 +1,16 @@
-import React, { useContext } from "react";
-import { BoxContainer } from "./common";
+import { useContext } from "react";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
+import styled from "styled-components";
 import "./form.css";
+
+export const BoxContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+`;
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
@@ -15,7 +23,7 @@ export function LoginForm(props) {
       </form>
       <Marginer direction="vertical" margin={10} />
       <Marginer direction="vertical" margin="1.6em" />
-      <button className="submitButton" type="submit">Signin</button>
+      <button className="submitButton" type="submit">Sign in</button>
       <Marginer direction="vertical" margin="1em" />
       <p className="mutedLink" href="#">
         Don't have an account?{" "}

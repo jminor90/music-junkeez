@@ -1,16 +1,16 @@
 .boxContainer {
-    width: 310px;
+    width: 370px;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     border-radius: 19px;
-    background: linear-gradient(to top, #313131 0%, #8a8a8a 100%);
-    box-shadow: 0 0 2px rgba(15, 15, 15, 0.28);
+    box-shadow: 0 0 7px rgb(224, 52, 152);
     position: absolute;
     overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: linear-gradient(1deg,rgb(20, 20, 20),#292929);
 }
 
 .topContainer {
@@ -43,6 +43,7 @@
     color: #fff;
     z-index: 10;
     margin: 0;
+    margin-bottom: 15px;
 }
 
 .smallText {
@@ -51,13 +52,7 @@
     font-size: 11px;
     z-index: 10;
     margin: 0;
-    margin-top: 7px;
-}
-
-@media (max-width: 750px) {
-    .boxContainer { 
-        width: 280px;
-    }
+    margin-bottom: 25px;
 }
 
 /********************************/

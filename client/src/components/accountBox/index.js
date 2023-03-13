@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { LoginForm } from "./LoginForm";
 import { motion } from "framer-motion";
@@ -8,15 +7,14 @@ import { SignupForm } from "./SignupForm";
 import "./index.css";
 
 const BackDrop = styled(motion.div)`
-  width: 160%;
-  height: 550px;
+
   position: absolute;
   display: flex;
   flex-direction: column;
   border-radius: 50%;
   transform: rotate(60deg);
-  top: -290px;
-  left: -70px;
+  top: -325px;
+  left: -90px;
   background: linear-gradient(
     58deg,
     #aA00FF 20%,
@@ -74,7 +72,6 @@ export function AccountBox(props) {
 
   return (
     <AccountContext.Provider value={contextValue}>
-      <div className="Container">
       <div className="boxContainer">
         <div className="topContainer">
           <BackDrop
@@ -85,15 +82,14 @@ export function AccountBox(props) {
           />
           {active === "signin" && (
             <div className="headerContainer">
-              <h2 className="headerText">Welcome</h2>
-              <h2 className="headerText">Back</h2>
+              <h2 className="headerText">Welcome Back!</h2>
               <h5 className="smallText">Please sign-in to continue!</h5>
             </div>
           )}
           {active === "signup" && (
             <div className="headerContainer">
-              <h2 className="headerText">Create</h2>
-              <h2 className="headerText">Account</h2>
+              <h2 className="headerText">Create an Account</h2>
+
               <h5 className="smallText">Please sign-up to continue!</h5>
             </div>
           )}
@@ -102,7 +98,6 @@ export function AccountBox(props) {
           {active === "signin" && <LoginForm />}
           {active === "signup" && <SignupForm />}
         </div>
-      </div>
       </div>
     </AccountContext.Provider>
   );

@@ -10,7 +10,7 @@ function Footer() {
                 <FaGithub />
             </a>
 
-            <h6 className='footerText'> &copy; Music Junkeez | Designed by Joshua Minor, Adam Hovda, Evan Towelerton and Anthony Frederick </h6>
+            <h6 className='footerText'> &copy; Music Junkeez | Developed by Joshua Minor, Adam Hovda, Evan Towelerton and Anthony Frederick </h6>
 
         </div>
     );
