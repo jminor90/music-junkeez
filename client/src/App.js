@@ -14,10 +14,10 @@ import { setContext } from '@apollo/client/link/context';
 
 import { AccountBox } from "./components/accountBox";
 import AppContainer from "./components/containers/AppContainer";
-import IndividualThread from "./pages/IndividualThread";
+import IndividualThread from "./pages/IndividualThreadPage";
 import Homepage from "./pages/Homepage";
 import Profile from "./pages/Profile";
-import Genre from "./pages/Genre";
+import GenrePage from "./pages/Genre";
 import OffTopic from "./pages/OffTopic";
 import GeneralDiscussion from "./pages/GeneralDiscussion";
 
@@ -58,11 +58,11 @@ function App() {
             <Route path="" element={<AppContainer />}>
               <Route index element={<Homepage />} />
               <Route path="/signin" element={<AccountBox />} />
-              <Route path="/genres" element={<Genre />} />
+              <Route path="/genres" element={<GenrePage />} />
               <Route path="/off-topic" element={<OffTopic />} />
               <Route path="/general-discussion" element={<GeneralDiscussion />} />
-              <Route path="/:individualThreadId" element={<IndividualThread />} />
-              <Route path="/:username" element={<Profile />} />
+              <Route path="/individualThread" element={<IndividualThread />} />
+              <Route path="/username" element={<Profile />} />
             </Route>
       </Routes>
 

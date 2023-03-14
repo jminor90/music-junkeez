@@ -1,0 +1,52 @@
+.postThreadButtonContainer {
+    position: absolute;
+    width: 100%;
+}
+
+.postThreadButton {
+    font-size: 14px;
+    text-align: center;
+    position: relative ;
+    left: auto;
+    right: auto;
+    top: 140px;
+    width: 135px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    border-radius: 40px !important;
+    padding: 8px 20px !important;
+    color: white !important;
+        background: linear-gradient(
+            35deg,
+            #be00e4 20%,
+            rgb(224, 150, 52) 100%
+        ) !important;
+}
+
+.postThreadButton:hover {
+    text-decoration: underline;
+}
+
+.albumReviewButton {
+    background: none;
+    outline: none;
+    border: none;
+    color: rgb(224, 52, 152);
+    font-size: 13px;
+    right: 20px;
+    position: absolute;
+    top: 155px;
+    text-decoration: underline;
+}
+
+.or {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    right: 165px;
+    position: absolute;
+    top: 155px;
+}
