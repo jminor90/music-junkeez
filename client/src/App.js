@@ -52,19 +52,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <div className='App'>
-          <ApolloProvider client={client}>
-  
-      <Routes >
-            <Route path="" element={<AppContainer />}>
-              <Route index element={<Homepage />} />
-              <Route path="/signin" element={<AccountBox />} />
-              <Route path="/genres" element={<GenrePage />} />
-              <Route path="/off-topic" element={<OffTopic />} />
-              <Route path="/general-discussion" element={<GeneralDiscussion />} />
-              <Route path="/individualThread" element={<IndividualThread />} />
-              <Route path="/username" element={<Profile />} />
-            </Route>
-      </Routes>
+      <ApolloProvider client={client}>
+
+        <Routes >
+          <Route path="" element={<AppContainer />}>
+            <Route index element={<Homepage />} />
+            <Route path="/signin" element={<AccountBox />} />
+            <Route path="/genres" element={<GenrePage />} />
+            <Route path="/off-topic" element={<OffTopic />} />
+            <Route path="/general-discussion" element={<GeneralDiscussion />} />
+            <Route path="/individualThread" element={<IndividualThread />} />
+            <Route path="/username" element={<Profile />} />
+          </Route>
+        </Routes>
 
       </ApolloProvider>
     </div>
