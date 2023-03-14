@@ -17,7 +17,7 @@ function SpotifyApi() {
 
     // Need to add selectedArtist logic
     const [artist, setArtist] = useState([]);
-    
+
     // Need to add tracks and selectedTrack logic
     // const [tracks, setTracks] = useState([]);
 
