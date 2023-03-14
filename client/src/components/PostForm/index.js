@@ -31,6 +31,8 @@ const PostForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+        console.log(title, description);
+
 
     try {
       const { data } = await createPost({
@@ -54,9 +56,47 @@ const PostForm = () => {
 
     if (name === "description" && value.length <= 280) {
       setDescription(value);
+
       setCharacterCount(value.length);
-    }
+    } 
   };
+
+  // test code to change to formState
+
+  // const [formState, setFormState] = useState({title: '', description: '' });
+  // const [createPost, { error, data }] = useMutation(CREATE_POST);
+  //   const [characterCount, setCharacterCount] = useState(0);
+
+  // // update state based on form input changes
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
+
+  // // submit form
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log(formState);
+  //   try {
+  //     const { data } = await createPost({
+  //       variables: { ...formState },
+  //     });
+
+  //     // Auth.login(data.login.token);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+
+  //   // clear form values
+  //   setFormState({
+  //     title: '',
+  //     description: '',
+  //   });
+  // };
 
 
 
@@ -78,7 +118,8 @@ const PostForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div>
-              <input name="title" placeholder="Title here"></input>
+              <input name="title" placeholder="Title here" value={title} 
+               onChange={(e) => setTitle(e.target.value)}></input>
             </div>
             <div className="col-12 col-lg-9">
               <textarea

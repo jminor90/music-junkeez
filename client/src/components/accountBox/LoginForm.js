@@ -24,7 +24,7 @@ export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
 
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -41,7 +41,7 @@ export function LoginForm(props) {
     event.preventDefault();
     console.log(formState);
     try {
-      const { data } = await login({
+      const { data } = await loginUser({
         variables: { ...formState },
       });
 
