@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+import { gql } from '@apollo/client';
 
 //Log In User
 export const LOGIN_USER = gql`

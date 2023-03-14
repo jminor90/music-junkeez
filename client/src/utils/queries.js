@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+import { gql } from '@apollo/client';
 
 
 //Get All Users ... probably for back end purposes only...?
