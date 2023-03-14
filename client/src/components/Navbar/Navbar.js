@@ -40,6 +40,7 @@ import "./Navbar.css";
                                 <a className="nav-link dropdown-toggle text-white firstLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Genres
                                 </a>
+<<<<<<< HEAD
                                 <ul className="dropdown-menu text-white">
                                     <li><Link to={`/genres`} className="dropdown-item text-white">All Genres</Link></li>
                                     <li><a className="dropdown-item text-white" href="#">Rock</a></li>
@@ -47,6 +48,15 @@ import "./Navbar.css";
                                     <li><a className="dropdown-item text-white" href="#">Jazz</a></li>
                                     <li><a className="dropdown-item text-white" href="#">Hip Hop</a></li>
                                     <li><a className="dropdown-item text-white" href="#">Classical</a></li>
+=======
+                                <ul className="dropdown-menu  text-white">
+                                    <li><Link to={`/genres`} className="dropdown-item">All Genres</Link></li>
+                                    <li><a className="dropdown-item" href="#">Rock</a></li>
+                                    <li><a className="dropdown-item" href="#">Pop</a></li>
+                                    <li><a className="dropdown-item" href="#">Jazz</a></li>
+                                    <li><a className="dropdown-item" href="#">Hip Hop</a></li>
+                                    <li><a className="dropdown-item" href="#">Classical</a></li>
+>>>>>>> 3900c4b218a8f255e57cd6d87e4ad17c71dde209
                                 </ul>
                                 </li>
                                 <li className="nav-item">
