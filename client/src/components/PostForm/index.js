@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
+// import { useQuery } from '@apollo/client';
 
-import {ADD_POST} from '../../utils/mutations';
-// import {QUERY_POSTS, QUERY_ME } from '../../utils/queries';
+import {CREATE_POST} from '../../utils/mutations';
+import {GET_ALL_POSTS} from '../../utils/queries';
 
 import Auth from "../../utils/auth";
 
 const PostForm = () => {
-  const [PostText, setPostText] = useState("");
-  const [PostTitle, setPostTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState("");
 
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addPost, { error }] = useMutation(ADD_POST, {
-    update(cache, { data: { addPost } }) {
+  const [createPost, { error }] = useMutation(CREATE_POST, {
+    update(cache, { data: { createPost } }) {
       try {
-        const { posts } = cache.readQuery({ query: QUERY_POSTS });
+        const { posts } = cache.readQuery({ query: GET_ALL_POSTS });
 
         cache.writeQuery({
-          query: QUERY_POSTS,
-          data: { posts: [addPost, ...posts] },
+          query: GET_ALL_POSTS,
+          data: { posts: [createPost, ...posts] },
         });
       } catch (e) {
         console.error(e);
@@ -30,30 +31,74 @@ const PostForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+        console.log(title, description);
+
 
     try {
-      const { data } = await addPost({
+      const { data } = await createPost({
         variables: {
-          PostTitle,
-          PostText,
+          title,
+          description,
           PostAuthor: Auth.getProfile().data.username,
         },
+
       });
-      setPostTitle("");
-      setPostText("");
+      setTitle("");
+      setDescription("");
     } catch (err) {
       console.error(err);
+      
     }
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === "PostText" && value.length <= 280) {
-      setPostText(value);
+    if (name === "description" && value.length <= 280) {
+      setDescription(value);
+
       setCharacterCount(value.length);
-    }
+    } 
   };
+
+  // test code to change to formState
+
+  // const [formState, setFormState] = useState({title: '', description: '' });
+  // const [createPost, { error, data }] = useMutation(CREATE_POST);
+  //   const [characterCount, setCharacterCount] = useState(0);
+
+  // // update state based on form input changes
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
+
+  // // submit form
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log(formState);
+  //   try {
+  //     const { data } = await createPost({
+  //       variables: { ...formState },
+  //     });
+
+  //     // Auth.login(data.login.token);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+
+  //   // clear form values
+  //   setFormState({
+  //     title: '',
+  //     description: '',
+  //   });
+  // };
+
+
 
   return (
     <div>
@@ -73,13 +118,14 @@ const PostForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div>
-              <input name="PostTitle" placeholder="Title here"></input>
+              <input name="title" placeholder="Title here" value={title} 
+               onChange={(e) => setTitle(e.target.value)}></input>
             </div>
             <div className="col-12 col-lg-9">
               <textarea
-                name="PostText"
+                name="description"
                 placeholder="Type here"
-                value={PostText}
+                value={description}
                 className="form-input w-100"
                 style={{ lineHeight: "1.5", resize: "vertical" }}
                 onChange={handleChange}
