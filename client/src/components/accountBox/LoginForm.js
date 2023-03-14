@@ -59,16 +59,9 @@ export function LoginForm(props) {
 
   return (
     <BoxContainer>
-<<<<<<< HEAD
-      <form className="formContainer">
-        <input className="input" type="email" placeholder="Email" />
-        <input className="input" type="password" placeholder="Password" />
-      </form>
-=======
       <form onSubmit={handleFormSubmit} className="formContainer">
-        <input className="input" type="username" placeholder="Username" name='email' value={formState.email} onChange={handleChange}/>
+        <input className="input" type="email" placeholder="Email" name='email' value={formState.email} onChange={handleChange}/>
         <input className="input" type="password" placeholder="Password" name='password' value={formState.password} onChange={handleChange}/>
->>>>>>> 3900c4b218a8f255e57cd6d87e4ad17c71dde209
       <Marginer direction="vertical" margin={10} />
       <Marginer direction="vertical" margin="1.6em" />
       <button className="submitButton" type="submit">Sign in</button>
