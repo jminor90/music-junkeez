@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import AppContainer from "./components/containers/AppContainer";
-import IndividualThread from "./pages/IndividualThread";
+import IndividualThread from "./pages/IndividualThreadPage";
 import Homepage from "./pages/Homepage";
 import Profile from "./pages/Profile";
 import GenrePage from "./pages/Genre";
@@ -21,8 +21,8 @@ function App() {
               <Route path="/genres" element={<GenrePage />} />
               <Route path="/off-topic" element={<OffTopic />} />
               <Route path="/general-discussion" element={<GeneralDiscussion />} />
-              <Route path="/:individualThreadId" element={<IndividualThread />} />
-              <Route path="/:username" element={<Profile />} />
+              <Route path="/individualThread" element={<IndividualThread />} />
+              <Route path="/username" element={<Profile />} />
             </Route>
       </Routes>
 

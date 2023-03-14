@@ -33,25 +33,20 @@ import "./Navbar.css";
 
                 </div>
                 </nav>
-                    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                        <div className="container-fluid">
-
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                            </button>
-                            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul className="navbar-nav">
+                    <div className="navbar navbar-expand-lg filterContainer">
+                        <div className="container-fluid filtersContainer">
+                            <ul className="filters">
                                 <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a className="nav-link dropdown-toggle text-white firstLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Genres
                                 </a>
-                                <ul class="dropdown-menu  text-white">
-                                    <li><Link to={`/genres`} className="dropdown-item">All Genres</Link></li>
-                                    <li><a className="dropdown-item" href="#">Rock</a></li>
-                                    <li><a className="dropdown-item" href="#">Pop</a></li>
-                                    <li><a className="dropdown-item" href="#">Jazz</a></li>
-                                    <li><a className="dropdown-item" href="#">Hip Hop</a></li>
-                                    <li><a className="dropdown-item" href="#">Classical</a></li>
+                                <ul className="dropdown-menu text-white">
+                                    <li><Link to={`/genres`} className="dropdown-item text-white">All Genres</Link></li>
+                                    <li><a className="dropdown-item text-white" href="#">Rock</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Pop</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Jazz</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Hip Hop</a></li>
+                                    <li><a className="dropdown-item text-white" href="#">Classical</a></li>
                                 </ul>
                                 </li>
                                 <li className="nav-item">
@@ -60,11 +55,13 @@ import "./Navbar.css";
                                 <li className="nav-item">
                                 <Link to={`/off-topic`} className="nav-link text-white" >Off-Topic</Link>
                                 </li>
+                                <li className="nav-item">
+                                <Link to={`/username`} className="nav-link text-white" >My Threads</Link>
+                                </li>
 
                             </ul>
                             </div>
                         </div>
-                        </nav>
 
                 </>
             );

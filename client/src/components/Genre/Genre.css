@@ -4,65 +4,154 @@
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid white;
-    display: flex;
+    display: block;
 }
 
-.threadContainer {
+.singleThreadContainer {
+    position: relative;
     width: 100%;
-    border: 2px solid white;
-    border-radius: 40px;
-    height: 100px;
+    border: 1px solid rgb(138, 138, 138);
+    margin-bottom: 15px;
+    height: fit-content !important;
+    background: rgb(17, 17, 17);
+}
+
+.smallText {
+    margin-bottom: 0 !important;
 }
 
 .smallText p {
-    position: absolute;
-    left: 30px;
-    top: 8px;
+    margin-left: 40px !important;
+    text-align: left;
+    left: 35px;
     font-size: 13px;
 }
 
 .smallText h5 {
-    position: absolute;
-    left: 30px;
-    top: 36px;
+    margin-left: 20px !important;
+    text-align: left;
+    left: 35px;
     font-size: 16px;
 }
 
 .smallText h6 {
-    position: absolute;
-    left: 30px;
-    top: 60px;
+    margin-right: 40px !important;
+    text-align: right;
+    left: 35px;
+    top: 55px;
     font-size: 13px;
 }
 
-.commentButton {
+.commentsNumberButton {
     color: rgb(224, 52, 152);
-    font-size: 20px;
     border-radius: 10px;
     border: none;
     background: transparent;
+    font-size: 15px;
 }
 
 .thumbContainer {
-    width: 80px;
+    position: absolute;
     display: grid;
+    right: 20px;
     height: 100%;
-    align-items: flex-end;
+    width: 50px;
 }
 
 .thumbButton {
     border: none;
     background: transparent;
     color: rgb(224, 52, 152);
+    font-size: 16px;
+}
+
+.thumbButtons {
+    border: none;
+    background: transparent;
+    color: rgb(224, 52, 152);
+    font-size: 16px;
+    left: 20px;
 }
 
 .thumbsDown {
-    font-size: 28px;
+    margin-right: 5px !important;
+    font-size: 20px;
     color: rgb(224, 52, 152);
 }
 
 .thumbsUp {
-    font-size: 28px;
+    margin-right: 5px !important;
+    font-size: 20px;
     color: rgb(224, 52, 152);
+}
+
+.commentContainer {
+    display: flex;
+    position: relative;
+    width: 95%;
+    height: 190px;
+    border: 1px solid rgb(138, 138, 138);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: visible;
+    margin-bottom: 15px;
+    background: rgb(17, 17, 17);
+}
+
+.commentText {
+    width: 100%;
+    height: 140px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    border-radius: none;
+}
+
+.commentsNumberButton {
+    position: relative !important;
+}
+
+textarea {
+    padding: 8px !important;
+}
+
+textarea .commentText {
+    border: none;
+}
+
+.commentText:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+input.commentText {
+    margin-left:25px
+}
+
+.buttonContainer {
+    position: relative;
+    width: fit-content;
+}
+
+.commentButton {
+    font-weight: 500;
+    position: absolute;
+    bottom: 10px;
+    left: 47%;
+}
+
+@media (max-width: 1000px) {
+    .genreContainer {
+        width: 80%;
+    }
+    .commentButton {
+        left: 46%;
+    }
+}
+
+@media (max-width: 700px) {
+    .commentButton {
+        left: 45%;
+    }
 }
