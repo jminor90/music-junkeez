@@ -6,6 +6,7 @@ function GenrePage() {
 
     return (
         <div>
+            <PostForm />
             <GenreComponent />
         </div>
     );
