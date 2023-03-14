@@ -1,6 +1,105 @@
 .postThreadButtonContainer {
+    z-index: 0;
     position: absolute;
     width: 100%;
+}
+
+.threadTextLower {
+    margin-left: 15px;
+    position: relative;
+    z-index: 1;
+    z-index: 1;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    border-radius: none;
+    outline: none;
+    resize: none;
+}
+
+.genresList {
+    margin-top: 15px;
+    text-decoration: underline;
+    color:rgb(224, 52, 152);
+}
+
+.filterListContainer {
+    width: 100%;
+    left: 0;
+    text-align: left;
+}
+
+.filterListCheckbox {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    margin-left: 13%;
+}
+
+.filterList {
+    width: 140px;
+    margin-left: 15px;
+    border-left: 1px solid rgb(224, 52, 152);
+    border-bottom: 1px solid rgb(224, 52, 152);
+    height: fit-content;
+    padding-bottom: 10px;
+}
+
+.filterListText {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.commentContainer {
+    height: fit-content !important;
+        position: relative;
+        left: 2.5%;
+        width: 95%;
+        border: 1px solid rgb(138, 138, 138);
+        border-radius: 40px !important;
+        height: 220px;
+        overflow: visible;
+        background: rgb(17, 17, 17);
+}
+
+.commentContainer {
+    height: 280px !important;
+}
+
+.threadTextUpper {
+    overflow: hidden;
+        height: fit-content;
+        margin-top: 7px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        color: white;
+        left: 15px;
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        border-radius: none;
+        outline: none;
+        resize: none;
+        border-bottom:1px solid  rgb(224, 52, 152);
+}
+.threadTitleContainer {
+    display: grid;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.threadTitle {
+    position: relative;
+    width: 100%;
+}
+
+.upperLeftPostThreadContainer {
+    width: 90%;
+    left: 0;
 }
 
 .postThreadButton {
@@ -9,14 +108,14 @@
     position: relative ;
     left: auto;
     right: auto;
-    top: 140px;
+    top: 230px;
     width: 135px;
     height: 40px;
     border: none;
     outline: none;
     font-weight: 500;
     border-radius: 40px !important;
-    padding: 8px 20px !important;
+    padding: 8px 20px;
     color: white !important;
         background: linear-gradient(
             35deg,
@@ -37,7 +136,7 @@
     font-size: 13px;
     right: 20px;
     position: absolute;
-    top: 155px;
+    top: 245px;
     text-decoration: underline;
 }
 
@@ -48,5 +147,33 @@
     font-size: 13px;
     right: 165px;
     position: absolute;
-    top: 155px;
+    top: 245px;
+}
+
+@media (max-width: 700px) {
+    .or {
+        display: none;
+    }
+
+    .albumReviewButton {
+        display: flex;
+        left: 0;
+        margin-left: 15px;
+    }
+    .postThreadButtonContainer {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        justify-content: end;
+        display: flex;
+    }
+    .postThreadButton {
+        display: flex;
+        justify-content: center;
+        margin-right: 5px;
+        border-bottom-right-radius: 200px !important;
+        width: 110px;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
 }
