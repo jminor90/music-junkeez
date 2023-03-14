@@ -1,0 +1,207 @@
+.genreContainer {
+    position: relative;
+    margin-top: 150px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.threadContainer {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(138, 138, 138);
+    background: rgb(17, 17, 17);
+    border-radius: 40px;
+    margin-bottom: 40px !important;
+    height: fit-content !important;
+}
+
+.threadText {
+    margin-bottom: 10px;
+    height: max-content !important;
+    word-wrap: break-word;
+    white-space: pre-line;
+    box-sizing: content-box !important;
+}
+
+.threadText h6 {
+    text-align: left;
+    margin-bottom: 10px !important;
+    margin-top: 10px;
+    margin-left: 35px;
+    font-weight: 400 !important;
+    font-size: 13px;
+}
+
+.threadContent {
+    text-align: left !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    height: max-content !important;
+
+}
+
+.commentContent {
+    margin-top: 15px !important;
+    text-align: left !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    height: max-content !important;
+
+}
+
+.threadText h4 {
+    font-size: 22px !important;
+    text-align: left;
+    margin-left: 10px !important;
+    width: 90% !important;
+    overflow: none;
+    padding-right: 50px !important;
+    height: max-content !important;
+}
+
+.threadText h5 {
+    text-align: right;
+    margin-right: 35px;
+    font-size: 13px;
+}
+
+.thumbContainer {
+    margin-top: 10px;
+    display: flex !important;
+    right: 60px !important;
+}
+
+.thumbButton {
+    display: flex !important;
+    border: none;
+    background: transparent;
+    color: rgb(224, 52, 152);
+    font-size: 15px !important;
+}
+
+span {
+    margin-top: -7px !important;
+    margin-left: 2px;
+}
+
+.thumbButtons {
+    border: none;
+    background: transparent;
+    color: rgb(224, 52, 152);
+    font-size: 16px;
+    left: 20px;
+}
+
+.thumbsDown {
+    font-size: 18px;
+    color: rgb(224, 52, 152);
+}
+
+.thumbsUp {
+    font-size: 18px;
+    color: rgb(224, 52, 152);
+}
+
+.commentContainer {
+    position: relative;
+    left: 2.5%;
+    width: 95%;
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 40px !important;
+    height: 220px;
+    overflow: visible;
+    background: rgb(17, 17, 17);
+}
+
+.commentText {
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    font-size: 16px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    resize: none;
+}
+
+.commentText:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+.commentButton {
+    border-radius: 40px !important;
+    padding: 8px 25px;
+    color: white !important;
+        background: linear-gradient(
+            35deg,
+            #be00e4 20%,
+            rgb(224, 150, 52) 100%
+        ) !important;
+    }
+
+
+.commentButton:hover {
+    text-decoration: underline;
+}
+
+.buttonContainer {
+    width: 100%;
+    position: relative;
+    right: 56%;
+}
+
+.commentsHeaderContainer {
+    width: 100%;
+}
+
+.commentsHeader {
+    text-align: left;
+    color: rgb(224, 52, 152);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 1500px) {
+    .buttonContainer {
+        right: 58%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .buttonContainer {
+        right: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .genreContainer {
+        width: 80%;
+    }
+    .buttonContainer {
+        right: 58%;
+    }
+}
+
+@media (max-width: 750px) {
+    .buttonContainer {
+        right: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttonContainer {
+        right: 64%;
+    }
+}
+
+@media (max-width: 500px) {
+    .buttonContainer {
+        right: 66%;
+    }
+}

@@ -1,0 +1,186 @@
+.genreContainer {
+    position: relative;
+    margin-top: 150px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.singleThreadContainer {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(138, 138, 138);
+    margin-bottom: 15px;
+    height: fit-content !important;
+    background: rgb(17, 17, 17);
+}
+
+.smallText {
+    margin-bottom: 0 !important;
+}
+
+.smallText p {
+    margin-left: 40px !important;
+    text-align: left;
+    left: 35px;
+    font-size: 13px;
+}
+
+.smallText h5 {
+    margin-left: 20px !important;
+    text-align: left;
+    left: 35px;
+    font-size: 16px;
+}
+
+.smallText h6 {
+    margin-right: 40px !important;
+    text-align: right;
+    left: 35px;
+    top: 55px;
+    font-size: 13px;
+}
+
+.commentNumberButton {
+    margin-right: 3px !important;
+    color: rgb(224, 52, 152);
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    font-size: 18px !important;
+}
+
+.thumbContainer {
+    right: 20px !important;
+    position: absolute;
+    display: grid;
+    height: 100%;
+    width: fit-content;
+}
+
+.thumbButton {
+    border: none;
+    background: transparent;
+    color: rgb(224, 52, 152);
+    font-size: 16px;
+}
+
+.thumbButtons {
+    border: none;
+    background: transparent;
+    color: rgb(224, 52, 152);
+    font-size: 16px;
+    left: 20px;
+}
+
+.thumbsDown {
+    margin-right: 3px !important;
+    font-size: 16px;
+    color: rgb(224, 52, 152);
+}
+
+.thumbsUp {
+    margin-right: 3px !important;
+    font-size: 16px;
+    color: rgb(224, 52, 152);
+}
+
+.commentContainer {
+    display: flex;
+    position: relative;
+    width: 95%;
+    height: 190px;
+    border: 1px solid rgb(138, 138, 138);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: visible;
+    margin-bottom: 15px;
+    background: rgb(17, 17, 17);
+}
+
+.commentText {
+    width: 100%;
+    height: 140px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    border-radius: none;
+}
+
+.commentsNumberButton {
+    position: relative !important;
+}
+
+textarea {
+    padding: 8px !important;
+}
+
+textarea .commentText {
+    border: none;
+}
+
+.commentText:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+input.commentText {
+    margin-left:25px
+}
+
+.buttonContainer {
+    position: relative;
+    width: fit-content;
+}
+
+.commentButton {
+    font-weight: 500;
+    position: absolute;
+    bottom: 10px;
+    left: 47%;
+}
+
+.newThreadButtonContainer {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.newThreadButton {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    position: relative;
+    border-radius: 40px !important;
+    padding: 8px 25px;
+    color: white !important;
+        background: linear-gradient(
+            35deg,
+            #be00e4 20%,
+            rgb(224, 150, 52) 100%
+        ) !important;
+}
+
+.newThreadButton:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .genreContainer {
+        width: 80%;
+    }
+    .commentButton {
+        left: 46%;
+    }
+}
+
+@media (max-width: 700px) {
+    .commentButton {
+        left: 45%;
+    }
+}
