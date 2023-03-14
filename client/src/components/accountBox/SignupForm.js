@@ -60,6 +60,8 @@ export function SignupForm(props) {
 
   return (
     <BoxContainer>
+
+      
       <form onSubmit={handleFormSubmit} className="formContainer">
         <input className="input" type="username" placeholder="Username" name="username" value={formState.username} onChange={handleChange}/>
         <input className="input" type="email" placeholder="Email"  name="email" value={formState.email} onChange={handleChange}/>
@@ -68,8 +70,8 @@ export function SignupForm(props) {
         <input className="input" type="password" placeholder="Confirm Password"  name="password" value={formState.password} onChange={handleChange}/>
       <Marginer direction="vertical" margin={10} />
       <button className="submitButton" type="submit">Signup</button>
-      </form>
       <Marginer direction="vertical" margin="1em" />
+      </form>
       <p className="mutedLink" href="#">
         Already have an account?
         <a className="boldLink" href="#" onClick={switchToSignin}>

@@ -62,11 +62,11 @@ export function LoginForm(props) {
       <form onSubmit={handleFormSubmit} className="formContainer">
         <input className="input" type="username" placeholder="Username" name='email' value={formState.email} onChange={handleChange}/>
         <input className="input" type="password" placeholder="Password" name='password' value={formState.password} onChange={handleChange}/>
-      </form>
       <Marginer direction="vertical" margin={10} />
       <Marginer direction="vertical" margin="1.6em" />
       <button className="submitButton" type="submit">Sign in</button>
       <Marginer direction="vertical" margin="1em" />
+      </form>
       <p className="mutedLink" href="#">
         Don't have an account?{" "}
         <a className="boldLink" href="#" onClick={switchToSignup}>
