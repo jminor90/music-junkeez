@@ -11,10 +11,9 @@
     position: relative;
     width: 100%;
     border: 1px solid rgb(138, 138, 138);
-    margin-bottom: 15px;
     background: rgb(17, 17, 17);
     border-radius: 40px;
-    margin-bottom: 50px !important;
+    margin-bottom: 40px !important;
     height: fit-content !important;
 }
 
@@ -44,6 +43,16 @@
 
 }
 
+.commentContent {
+    margin-top: 15px !important;
+    text-align: left !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    height: max-content !important;
+
+}
+
 .threadText h4 {
     font-size: 22px !important;
     text-align: left;
@@ -57,7 +66,7 @@
 .threadText h5 {
     text-align: right;
     margin-right: 35px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .thumbContainer {
@@ -75,8 +84,8 @@
 }
 
 span {
-    margin-top: -5px !important;
-    margin-left: 3px;
+    margin-top: -7px !important;
+    margin-left: 2px;
 }
 
 .thumbButtons {

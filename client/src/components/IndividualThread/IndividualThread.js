@@ -41,10 +41,24 @@ function IndividualThread() {
 
             <div className="threadContainer">
                 <div className="threadText">
-                    <h6>-GenreType-</h6>
-                    <h4 className='threadTitle'>-ThreadTitle-</h4>
-                    <p className='threadContent'>-ThreadContent-</p>
-                    <h5>-ThreadAuthor- -ThreadDate- </h5>
+                    <p className='commentContent'>-CommentContent-</p>
+                    <h5>-CommentAuthor- -CommentDate- </h5>
+                </div>
+                
+            <div className='thumbContainer'>
+                <button className='thumbButton'>
+                    <FaThumbsUp className='thumbsUp'/><span> # </span>
+                </button>
+                <button className='thumbButton'>
+                    <FaThumbsDown className='thumbsDown'/><span> # </span>
+                </button>
+            </div>
+            </div>
+
+            <div className="threadContainer">
+                <div className="threadText">
+                    <p className='commentContent'>-CommentContent-</p>
+                    <h5>-CommentAuthor- -CommentDate- </h5>
                 </div>
                 
             <div className='thumbContainer'>

@@ -42,20 +42,21 @@
     font-size: 13px;
 }
 
-.commentsNumberButton {
+.commentNumberButton {
+    margin-right: 3px !important;
     color: rgb(224, 52, 152);
     border-radius: 10px;
     border: none;
     background: transparent;
-    font-size: 15px;
+    font-size: 18px !important;
 }
 
 .thumbContainer {
+    right: 20px !important;
     position: absolute;
     display: grid;
-    right: 20px;
     height: 100%;
-    width: 50px;
+    width: fit-content;
 }
 
 .thumbButton {
@@ -74,14 +75,14 @@
 }
 
 .thumbsDown {
-    margin-right: 5px !important;
-    font-size: 20px;
+    margin-right: 3px !important;
+    font-size: 16px;
     color: rgb(224, 52, 152);
 }
 
 .thumbsUp {
-    margin-right: 5px !important;
-    font-size: 20px;
+    margin-right: 3px !important;
+    font-size: 16px;
     color: rgb(224, 52, 152);
 }
 
@@ -139,6 +140,34 @@ input.commentText {
     position: absolute;
     bottom: 10px;
     left: 47%;
+}
+
+.newThreadButtonContainer {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.newThreadButton {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    position: relative;
+    border-radius: 40px !important;
+    padding: 8px 25px;
+    color: white !important;
+        background: linear-gradient(
+            35deg,
+            #be00e4 20%,
+            rgb(224, 150, 52) 100%
+        ) !important;
+}
+
+.newThreadButton:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 1000px) {
