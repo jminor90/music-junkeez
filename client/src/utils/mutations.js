@@ -12,7 +12,7 @@ export const LOGIN_USER = gql`
     }
     }
 `
-/*-------------------------------------------------------*/
+
 
 // Add User
 export const ADD_USER = gql`
