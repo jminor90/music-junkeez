@@ -1,6 +1,20 @@
 import "./PostThread.css";
 
+// Importing SpotifyAPI module
+import SpotifyApi from '../spotifyAPI/spotify';
+// Importing UseState
+import { useState } from 'react';
+
 function PostThread() {
+    const [showSpotifyApi, setShowSpotifyApi] = useState(false);
+
+    const handleAlbumReviewButtonClick = () => {
+        setShowSpotifyApi(true);
+    };
+
+    if (showSpotifyApi) {
+        return <SpotifyApi />;
+    }
 
     return (
         <div className="commentContainer">
@@ -49,7 +63,7 @@ function PostThread() {
             <button className='postThreadButton'>Post Thread +</button>
         </div>
             <p className="or">or</p> 
-            <button className='albumReviewButton'>Make an album review</button>
+            <button className='albumReviewButton' onClick={handleAlbumReviewButtonClick}>Add Media</button>
         </div>
 
     );
