@@ -45,7 +45,7 @@ import "./Navbar.css";
                                 <a className="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Genres
                                 </a>
-                                <ul class="dropdown-menu  text-white">
+                                <ul className="dropdown-menu  text-white">
                                     <li><Link to={`/genres`} className="dropdown-item">All Genres</Link></li>
                                     <li><a className="dropdown-item" href="#">Rock</a></li>
                                     <li><a className="dropdown-item" href="#">Pop</a></li>
