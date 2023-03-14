@@ -22,42 +22,18 @@ function PostThread() {
                     <textarea className='threadTextUpper' rows='1' placeholder='Enter thread title here ->'>
                     </textarea>
                     <div className="threadTextLowerContainer">
-                    <textarea className='threadTextLower' placeholder='Share your thoughts here ->'>
+                    <textarea className='threadTextLower' rows='8' placeholder='Share your thoughts here ->'>
                     </textarea>
                     </div>
                 </div>
         <div className='filterList'>
-            <h6 className="genresList">Genres:</h6>
-            <div className="FilterListContainer">
-            <div className="filterListCheckbox" >
-                <input type="checkbox" id="Rock" name="Rock" value="Rock"></input>
-                <label className="filterListText" for="Rock">Rock</label>
-            </div>
-            <div className="filterListCheckbox">
-                <input type="checkbox" id="Pop" name="Pop" value="Pop"></input>
-                <label className="filterListText" for="Pop">Pop</label>
-            </div>
-            <div className="filterListCheckbox">
-                <input type="checkbox" id="Jazz" name="Jazz" value="Jazz"></input>
-                <label className="filterListText" for="Jazz">Jazz</label>
-            </div>
-            <div className="filterListCheckbox">
-                <input type="checkbox" id="Hip-Hop" name="Hip Hop" value="Hip Hop"></input>
-                <label className="filterListText" for="Hip Hop">Hip-Hop</label>
-            </div>
-            <div  className="filterListCheckbox">
-                <input type="checkbox" id="Classical" name="Classical" value="Classical"></input>
-                <label className="filterListText" for="Classical">Classical</label>
-            </div>
-            <div className="filterListCheckbox">
-                <input type="checkbox" id="General" name="General" value="General"></input>
-                <label className="filterListText" for="General">General</label>
-            </div>
-            <div className="filterListCheckbox">
-                <input type="checkbox" id="Off-Topic" name="Off-Topic" value="Off-Topic"></input>
-                <label className="filterListText" for="Off-Topic">Off-Topic</label>
-            </div>
-            </div>
+        <label className="form-label topicHeader">Choose Topic:</label>
+  <div className="input-group dropdownTopicsContainer">
+      <select className="form-select" id="topic" aria-label="Default select example">
+          <option value="General Discussion">General Discussion</option>
+          <option value="Off-Topic">Off-Topic</option>
+      </select>
+  </div>
         </div>
         <div className='postThreadButtonContainer'>
             <button className='postThreadButton'>Post Thread +</button>
