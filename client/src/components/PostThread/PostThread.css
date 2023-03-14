@@ -1,14 +1,11 @@
-.postThreadButtonContainer {
-    z-index: 0;
-    position: absolute;
-    width: 100%;
+.threadTextLowerContainer {
+    height: 150px !important;
 }
 
 .threadTextLower {
+    z-index: 0;
     margin-left: 15px;
     position: relative;
-    z-index: 1;
-    z-index: 1;
     width: 100%;
     color: white;
     background-color: transparent;
@@ -33,7 +30,7 @@
 
 .filterListCheckbox {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: left;
     margin-left: 13%;
 }
@@ -73,7 +70,7 @@
         height: fit-content;
         margin-top: 7px;
         position: relative;
-        z-index: 1;
+        z-index: 2;
         width: 100%;
         color: white;
         left: 15px;
@@ -89,7 +86,7 @@
     display: grid;
     position: relative;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .threadTitle {
@@ -103,6 +100,8 @@
 }
 
 .postThreadButton {
+    margin-top: 50px;
+    z-index: 3;
     font-size: 14px;
     text-align: center;
     position: relative ;
@@ -161,7 +160,6 @@
         margin-left: 15px;
     }
     .postThreadButtonContainer {
-        z-index: 0;
         position: absolute;
         width: 100%;
         justify-content: end;

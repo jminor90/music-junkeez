@@ -7,8 +7,10 @@ function PostThread() {
                 <div className="threadTitleContainer">
                     <textarea className='threadTextUpper' rows='1' placeholder='Enter thread title here ->'>
                     </textarea>
-                    <textarea className='threadTextLower' rows='10' placeholder='Share your thoughts here ->'>
+                    <div className="threadTextLowerContainer">
+                    <textarea className='threadTextLower' placeholder='Share your thoughts here ->'>
                     </textarea>
+                    </div>
                 </div>
         <div className='filterList'>
             <h6 className="genresList">Genres:</h6>
