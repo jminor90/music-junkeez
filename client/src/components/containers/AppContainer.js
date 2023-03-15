@@ -6,9 +6,9 @@ function AppContainer() {
 
     return (
         <>
-            <Navbar />
-            <Outlet />
-            <Footer />
+            <Navbar classname="navbarZindex"/>
+            <Outlet classname="outletZindex"/>
+            <Footer classname="footerZindex"/>
         </>
     );
 }

@@ -95,7 +95,7 @@ function PostThread() {
         {Auth.loggedIn() ? (
             <>
             <form onSubmit={handleFormSubmit}>
-        <div className="commentContainer">
+        <div className="commentContainerBox">
 
               {/* <input name="title" placeholder="Title here" value={title} 
                onChange={(e) => setTitle(e.target.value)}></input>
