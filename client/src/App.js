@@ -63,7 +63,7 @@ function App() {
             <Route path="/genres" element={<GenrePage />} />
             <Route path="/off-topic" element={<OffTopic />} />
             <Route path="/general-discussion" element={<GeneralDiscussion />} />
-            <Route path="/individualThread" element={<IndividualThread />} />
+            <Route path="/individualThread/:postId" element={<IndividualThread />} />
             <Route path="/username" element={<Profile />} />
           </Route>
         </Routes>
