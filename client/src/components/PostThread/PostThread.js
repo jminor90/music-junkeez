@@ -1,4 +1,5 @@
 import "./PostThread.css";
+import GenreDropdown from "../GenreDropdown/GenreDropdown.js";
 
 // Importing SpotifyAPI module
 import SpotifyApi from '../spotifyAPI/spotify';
@@ -6,7 +7,9 @@ import SpotifyApi from '../spotifyAPI/spotify';
 import { useState } from 'react';
 
 function PostThread() {
+
     const [showSpotifyApi, setShowSpotifyApi] = useState(false);
+    const [isClicked, setIsClicked] = useState(false);
 
     const handleAlbumReviewButtonClick = () => {
         setShowSpotifyApi(true);
@@ -27,13 +30,18 @@ function PostThread() {
                     </div>
                 </div>
         <div className='filterList'>
-        <label className="form-label topicHeader">Choose Topic:</label>
-  <div className="input-group dropdownTopicsContainer">
-      <select className="form-select" id="topic" aria-label="Default select example">
-          <option value="General Discussion">General Discussion</option>
-          <option value="Off-Topic">Off-Topic</option>
-      </select>
-  </div>
+            <li className="nav-item dropdown dropdownTopics">
+                <div className="dropdownItemsContainer">
+                <a className="nav-link dropdown-toggle topicHeader" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Choose Topic:
+                </a>
+                    <ul className="dropdown-menu dropdownItems">
+                        <li className="dropdown-item topicItem" onClick={() => setIsClicked(!isClicked)}>General</li>
+                        <li className="dropdown-item topicItem">Off-Topic</li>
+                    </ul>
+                    { isClicked && <GenreDropdown /> }
+                </div>
+            </li>
         </div>
         <div className='postThreadButtonContainer'>
             <button className='postThreadButton'>Post Thread +</button>

@@ -1,0 +1,20 @@
+.GenreDropdownContainer {
+    margin-top: 10px;
+    position: absolute;
+    height: fit-content;
+}
+
+.inputContainer {
+    margin-left: 5px;
+}
+
+.valueContainer {
+    margin-left: 7px;
+    display: flex;
+    width: 100%;
+    height: 28px;
+}
+
+.valueInput {
+    margin-left: 5px;
+}
