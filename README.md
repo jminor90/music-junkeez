@@ -21,12 +21,18 @@ You may need to install the following packages...
 if running from local machine, be sure to ```npm install``` on the root folder to install all required node-modules
 
 ## Usage
-Link to Application: https://
+Link to Application: http://music-junkeez.herokuapp.com/
 
 Click On Deployed Link to begin. 
+
+
 - Users must be signed in to create a post. Once signed in/ signed up users can create a post by click the "Post Thread+" button.
 - After post is submitted, users can also click on "My Threads" to see what posts they have created.
 - New Posts also can select "Add Spotify Media" Which will allow a user to search Spotify's database to add Spotify data to the post.
+
+![Screenshot of Homepage](/screenshots/music-junkeez-homepage.png)
+![Screenshot of Login](/screenshots/music-junkeez-login.png)
+![Screenshot of Post](/screenshots/music-junkeez-post.png)
 
 ***As of March 15, 2023, this application does have limited functionality, but is actively being worked on. 'Star' this repo to follow further updates.**
 
