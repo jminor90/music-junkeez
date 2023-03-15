@@ -224,7 +224,7 @@ li a .dropdown-item {
     }
     .navImg2 {
         height: 50px;
-        position: fixed;
+        position: absolute;
         left: 45%;
         right: 55%;
     }
@@ -238,12 +238,12 @@ li a .dropdown-item {
         z-index: 1;
     }
     .signinContainer {
-        position: fixed;
+        position: absolute;
         right: 0;
         z-index: 2;
     }
     .logout {
-        position: fixed;
+        position: absolute;
         right: 0;
         top: 17px;
         z-index: 1;
