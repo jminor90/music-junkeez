@@ -8,6 +8,7 @@ const typeDefs = gql`
     description: String
     postAuthor: String
     topic: String
+    createdAt: String
     genreKeywords: [String]
     albumReview: albumReview
     responses: [Response]
