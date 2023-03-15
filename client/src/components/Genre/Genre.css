@@ -42,7 +42,6 @@
     width: fit-content;
     margin-left: 5px;
     margin-right: 25px;
-
 }
 
 .spanTitle {
@@ -74,8 +73,14 @@
 }
 
 .profileElementContainer {
+    width: 90%;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+}
+
+.elementContainer {
+    display: flex;
+    justify-content: center;
 }
 
 .faArrow {
@@ -132,6 +137,22 @@
     margin-right: 3px !important;
     font-size: 16px;
     color: rgb(224, 52, 152);
+}
+
+.profileHeader h5 {
+    color: rgb(224, 52, 152);
+    font-size: 24px !important;
+}
+
+.profileHeader {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.faArrowDown {
+    color: rgb(224, 52, 152);
+    margin-top: 7px;
 }
 
 .commentContainer {
@@ -216,6 +237,15 @@ input.commentText {
 
 .newThreadButton:hover {
     text-decoration: underline;
+}
+
+.genreContainerProfile {
+    position: relative;
+    margin-top: 50px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 @media (max-width: 1000px) {

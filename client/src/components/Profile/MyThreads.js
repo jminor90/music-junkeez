@@ -6,7 +6,7 @@ const MyThreads = ({ getMyPosts }) => {
   }
 
   return (
-    <div className="threadContainerFull">
+    <div className="genreContainerProfile">
 
       {
         getMyPosts.map((posts) => (
@@ -22,10 +22,12 @@ const MyThreads = ({ getMyPosts }) => {
               </span>
               </div>
               </div>
-
+            <div className="elementContainer">
             <div className="profileElementContainer">
               <p>{posts.description}</p>
+              <p>Created Date??</p>
             </div>
+          </div>
           </div>
         ))}
     </div>

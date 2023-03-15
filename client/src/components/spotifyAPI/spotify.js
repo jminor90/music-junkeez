@@ -142,7 +142,7 @@ function AlbumDetails({ album }) {
                 }}
                 onChange={event => setSearchInput(event.target.value)}
                 />
-              <Button onClick={search}>
+              <Button onClick={search} c>
                 Search
               </Button>
             </InputGroup>
