@@ -21,7 +21,7 @@ import "./Genre.css";
                 <h5>-ThreadTitle-</h5>
                 <h6>-ThreadAuthor- -ThreadDate-</h6>
             </div>
-            
+
         <div className='thumbContainer'>
         <button className='thumbButton'><FaRegCommentDots className='commentNumberButton'/> #</button>
             <button className='thumbButton'>
