@@ -30,6 +30,7 @@ import "./Navbar.css";
                     {AuthService.loggedIn() ? (
                 <>
                 <div className="logoutContainer">
+                <p>Hello,</p>
                 <button className="logout">
                   <Nav.Link onClick={AuthService.logout}>Logout</Nav.Link>
                   </button>
