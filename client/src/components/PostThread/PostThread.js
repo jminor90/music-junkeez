@@ -27,7 +27,7 @@ function PostThread() {
             <button className='postThreadButton'>Post Thread +</button>
         </div>
             <p className="or">or</p> 
-            <button className='albumReviewButton' onClick={handleAlbumReviewButtonClick}>Add Media</button>
+            <button className='albumReviewButton' onClick={handleAlbumReviewButtonClick}>Add Spotify Media</button>
         </div>
 
     );
