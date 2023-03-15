@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Music-Junkeez
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Description
+A music forum built in ReactJS. Users can  Log In/ Create Account, Post new threads and respond to threads. Connected to Spotify's API, and utilizes GraphQL with ApolloServer.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
 
-### `npm test`
+## Installation
+You may need to install the following packages...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+if running from local machine, be sure to ```npm install``` on the root folder to install all required node-modules
 
-### `npm run build`
+## Usage
+Link to Application: https://
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Click On Deployed Link to begin. 
+- Users must be signed in to create a post. Once signed in/ signed up users can create a post by click the "Post Thread+" button.
+- After post is submitted, users can also click on "My Threads" to see what posts they have created.
+- New Posts also can select "Add Spotify Media" Which will allow a user to search Spotify's database to add Spotify data to the post.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***As of March 15, 2023, this application does have limited functionality, but is actively being worked on. 'Star' this repo to follow further updates.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits
+This application is a collaboration by:
+- [Adam Hovda](https://github.com/adamhovda)
+- [Anthony Frederick](https://github.com/AnthonyFrederick7)
+- [Evan Towlerton](https://github.com/Etowww)
+- [Joshua Minor](https://github.com/jminor90)
 
-### `npm run eject`
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+See LICENSE file for more information...
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Questions?
+If you have any comments or questions about the application feel free to contact any of the contributors listed in the credits.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Github: https://github.com/jminor90
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Email: minor.jbm@gmail.com
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
