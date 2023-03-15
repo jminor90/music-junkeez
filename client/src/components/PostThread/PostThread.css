@@ -23,56 +23,62 @@
     height: 100%;
 }
 
-.genresList {
-    margin-top: 15px;
-    text-decoration: underline;
-    color:rgb(224, 52, 152);
+.topicItem {
+    width: fit-content !important;
+    color: white !important;
+    font-size: 13px;
+    margin-top: 5px !important;
 }
 
-.filterListContainer {
-    width: 100%;
-    left: 0;
-    text-align: left;
-}
-
-.filterListCheckbox {
-    position: relative;
-    z-index: 2;
-    text-align: left;
-    margin-left: 13%;
-}
-
-.dropdownTopicsContainer {
-    width: 100%;
-}
-
-#topic {
-    color: white;
-    width: 90% !important;
+.dropdownTopics {
+    width: 100% !important;
     font-size: 14px;
-    background: transparent;
-    border: none;
+    width: 100% !important;
 }
 
-#topic:active {
-    outline: none;
-    border: none;
+ul.dropdown-menu.dropdownItems.show {
+    right: 50px !important;
+    border: none !important;
+    outline: none !important;
+    overflow: none !important;
+}
+
+ul.dropdown-menu.dropdownItems.show:hover {
+    background: rgb(17, 17, 17) !important;
+}
+
+.dropdownItems {
+    width: 100px !important;
+    background: rgb(17, 17, 17) !important;
 }
 
 .topicHeader {
-    margin-top: 12px;
-    color: rgb(224, 52, 152);
+    font-size: 15px;
+    margin-top: 25px;
+    color: white !important;
     text-decoration: underline;
+}
+
+.dropdownTopics:hover {
+    text-decoration: none;
 }
 
 .filterList {
     position: relative;
     z-index: 2;
-    width: 200px;
+    width: 150px;
     margin-left: 15px;
+    border-bottom-left-radius: 25px;
     border-left: 1px solid rgb(224, 52, 152);
     border-bottom: 1px solid rgb(224, 52, 152);
     height: 210px;
+}
+
+.dropdown-item.topicItem:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background: transparent !important;
+    border-top: none;
 }
 
 .filterListText {
@@ -85,7 +91,6 @@
         position: relative;
         left: 2.5%;
         width: 95%;
-        border: 1px solid rgb(138, 138, 138);
         border-radius: 40px !important;
         height: 220px;
         overflow: visible;
