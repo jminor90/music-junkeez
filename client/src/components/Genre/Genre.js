@@ -1,6 +1,3 @@
-import { FaThumbsDown } from 'react-icons/fa';
-import { FaThumbsUp } from 'react-icons/fa';
-import { FaRegCommentDots } from 'react-icons/fa';
 import { useState } from 'react';
 import PostThread from '../PostThread/PostThread.js';
 import "./Genre.css";

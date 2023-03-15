@@ -39,6 +39,10 @@
     text-decoration: none;
 }
 
+.titleLink:hover {
+    text-decoration: underline;
+}
+
 .threadContainer {
     border: 1px solid rgb(61, 61, 61);
     background: #181818;
@@ -169,10 +173,9 @@
 }
 
 .commentContainer {
+    width: 95%;
     display: flex;
     position: relative;
-    width: 95%;
-    height: 190px;
     border: 1px solid rgb(138, 138, 138);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -182,9 +185,10 @@
 }
 
 .commentText {
+    margin-bottom: 50px;
     width: 100%;
-    height: 140px;
     color: white;
+    height: 140px;
     background-color: transparent;
     border: none;
     font-size: 16px;
@@ -213,8 +217,10 @@ input.commentText {
 }
 
 .buttonContainer {
-    position: relative;
-    width: fit-content;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .commentButton {
@@ -262,5 +268,8 @@ input.commentText {
 @media (max-width: 1000px) {
     .genreContainer {
         width: 80%;
+    }
+    .threadTitleContainer {
+        width: 90%;
     }
 }

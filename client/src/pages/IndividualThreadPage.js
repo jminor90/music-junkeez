@@ -1,4 +1,3 @@
-import IndividualThread from "../components/IndividualThread/IndividualThread";
 import "../components/IndividualThread/IndividualThread.css";
 
 import { useParams } from 'react-router-dom';
@@ -44,7 +43,7 @@ function IndividualThreadPage() {
                 </div>
                 
                 <div className="commentContainer">
-                <textarea className='commentText' rows='10' placeholder='Share your thoughts here ->'>
+                <textarea className='commentText' rows='14' placeholder='Share your thoughts here ->'>
                 </textarea>
                 <div className='buttonContainer'>
                 <button className='commentButton'>Comment</button>
