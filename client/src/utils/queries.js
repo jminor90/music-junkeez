@@ -1,23 +1,23 @@
 import { gql } from '@apollo/client';
 
 
-//Get All Users ... probably for back end purposes only...?
-export const GET_ALL_USERS = gql`
-query getAllPosts {
-  getAllPosts {
-    _id
-    title
-    description
-    postAuthor
-    responses {
-      _id
-      responseText
-      responseAuthor
-      createdAt
-    }
-  }
-}
-`
+//Get All Users ... probably for back end purposes only...? 
+//I don't think this is real?
+// export const GET_ALL_USERS = gql`
+// query getAllPosts {
+//   getAllPosts {
+//     _id
+//     title
+//     description
+//     postAuthor
+//     responses {
+//       _id
+//       responseText
+//       responseAuthor
+//       createdAt
+//     }
+//   }
+// }`
 /*-------------------------------------------------------*/
 
 
@@ -29,11 +29,19 @@ query getAllPosts {
     title
     description
     postAuthor
+    createdAt
     responses {
       _id
       responseText
       responseAuthor
       createdAt
+    }
+    topic
+    genreKeywords
+    albumReview {
+      spotifyArtist
+      spotifyAlbumName
+      spotifyAlbumArt
     }
   }
 }
@@ -50,6 +58,7 @@ query getMyPosts {
     responses {
       responseText
       responseAuthor
+      createdAt
     }
   }
 }
