@@ -15,6 +15,7 @@ const PostForm = () => {
   const [characterCount, setCharacterCount] = useState(0);
 
   const [createPost, { error }] = useMutation(CREATE_POST, {
+
     update(cache, { data: { createPost } }) {
       try {
         const { posts } = cache.readQuery({ query: GET_ALL_POSTS });
@@ -37,9 +38,9 @@ const PostForm = () => {
     try {
       const { data } = await createPost({
         variables: {
-          title,
-          description,
-          PostAuthor: Auth.getProfile().data.username,
+          post: {title,
+          description},
+          
         },
 
       });
@@ -128,7 +129,8 @@ const PostForm = () => {
                 value={description}
                 className="form-input w-100"
                 style={{ lineHeight: "1.5", resize: "vertical" }}
-                onChange={handleChange}
+                // onChange={handleChange}
+                onChange={(e) => setDescription(e.target.value)}
               ></textarea>
             </div>
 
@@ -146,8 +148,8 @@ const PostForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{" "}
-          <Link to="/signin">login</Link> or <Link to="/signin">signup.</Link>
+          You need to be logged in to create a thread. Please{" "}
+          <Link to="/signin">login.</Link>
         </p>
       )}
     </div>
