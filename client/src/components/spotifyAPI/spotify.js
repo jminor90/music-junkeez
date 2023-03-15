@@ -59,8 +59,14 @@ function SpotifyApi() {
         setFormSubmitted(true);
       });
 }
+// Function that handles the goback button functionality
+function goBack() {
+  setSelectedAlbum(null);
+  setSelectedArtist(null);
+}
+
 // Function that handles a selected artist and its publishing info functionality
-function ArtistDetails({ artist }) {
+function ArtistDetails({ artist, onGoBack }) {
   const handlePublishButtonClick = () => {
     const postInfo = {
       albumArtist: artist.name,
@@ -76,14 +82,15 @@ function ArtistDetails({ artist }) {
         <Col>
           <Card>
             <Card.Img variant="top" src={artist.images[0].url} />
-            <Card.Body>
+            <Card.Body class='text-dark'>
               <Card.Title></Card.Title>
-              <Card.Text class='text-dark'>
+              <Card.Text>
                 {artist.name}
               </Card.Text>
             </Card.Body>
           </Card>
           <button onClick={handlePublishButtonClick}>Select this artist</button>
+          <button onClick={onGoBack}>Go Back</button>
         </Col>
       </Row>
     </Container>
@@ -92,7 +99,7 @@ function ArtistDetails({ artist }) {
 
 
 // Function that handles a selected album and its publishing functionality
-function AlbumDetails({ album }) {
+function AlbumDetails({ album, onGoBack }) {
     const handlePublishButtonClick = () => {
       const postInfo = {
         albumImage: album.images[0].url,
@@ -109,7 +116,7 @@ function AlbumDetails({ album }) {
           <Col>
             <Card>
               <Card.Img variant="top" src={album.images[0].url} />
-              <Card.Body>
+              <Card.Body class='text-dark'>
                 <Card.Title>{album.name}</Card.Title>
                 <Card.Text>
                   By: {searchInput}
@@ -117,6 +124,7 @@ function AlbumDetails({ album }) {
               </Card.Body>
             </Card>
             <button onClick={handlePublishButtonClick}>Select this album</button>
+            <button onClick={onGoBack}>Go Back</button>
           </Col>
         </Row>
       </Container>
@@ -128,7 +136,7 @@ function AlbumDetails({ album }) {
   return (
     <div className="App">
       {selectedAlbum ? (
-        <AlbumDetails album={selectedAlbum} />
+        <AlbumDetails album={selectedAlbum} onGoBack={goBack}/>
       ) : (
         <div>
           <Container>
@@ -149,10 +157,11 @@ function AlbumDetails({ album }) {
             </InputGroup>
           </Container>
         {selectedArtist ? (
-          <ArtistDetails artist={selectedArtist} />
+          <ArtistDetails artist={selectedArtist} onGoBack={goBack}/>
         ) : (
           formSubmitted && (
             <Container>
+              <p className='d-flex'>Most relevant artist based on your search...</p>
               <Row className='mx-2 row row-cols-4'>
                 <Card onClick={() => setSelectedArtist(artist)}>
                   {formSubmitted && <Card.Img src={artist.images[0].url}/>}
@@ -164,21 +173,24 @@ function AlbumDetails({ album }) {
             </Container>
             )
           )}
-          <Container>
-            <Row className="mx-2 row row-cols-4">
-              {albums.map( (album, i) => {
-                console.log(album);
-                return(
-                  <Card key={i} onClick={() => setSelectedAlbum(album)}>
-                    <Card.Img src={album.images[0].url} />
-                    <Card.Body class='text-dark'>
-                      <Card.Title>{album.name}</Card.Title>
-                    </Card.Body>
-                  </Card>
-                )
-              })}
-            </Row>
-          </Container>
+          {!selectedArtist && formSubmitted && (
+            <Container>
+              <p className='d-flex mt-3'>Most relevant albums / tracks based on your search...</p>
+              <Row className="mx-2 row row-cols-4">
+                {albums.map( (album, i) => {
+                  console.log(album);
+                  return(
+                    <Card key={i} onClick={() => setSelectedAlbum(album)}>
+                      <Card.Img src={album.images[0].url} />
+                      <Card.Body class='text-dark'>
+                        <Card.Title>{album.name}</Card.Title>
+                      </Card.Body>
+                    </Card>
+                  )
+                })}
+              </Row>
+            </Container>
+          )}
         </div>
       )}
     </div>
