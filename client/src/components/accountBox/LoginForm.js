@@ -24,6 +24,7 @@ export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
 
   const [formState, setFormState] = useState({ email: '', password: '' });
+  const [validated] = useState(false);
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -59,7 +60,7 @@ export function LoginForm(props) {
 
   return (
     <BoxContainer>
-      <form onSubmit={handleFormSubmit} className="formContainer">
+      <form onSubmit={handleFormSubmit} noValidate validated={validated} className="formContainer">
         <input className="input" type="email" placeholder="Email" name='email' value={formState.email} onChange={handleChange}/>
         <input className="input" type="password" placeholder="Password" name='password' value={formState.password} onChange={handleChange}/>
       <Marginer direction="vertical" margin={10} />
