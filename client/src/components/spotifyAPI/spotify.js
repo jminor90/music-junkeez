@@ -17,6 +17,7 @@ function SpotifyApi() {
 
     // Need to add selectedArtist logic
     const [artist, setArtist] = useState([]);
+    const [selectedArtist, setSelectedArtist] = useState(null);
 
     // Need to add tracks and selectedTrack logic
     // const [tracks, setTracks] = useState([]);
@@ -58,27 +59,46 @@ function SpotifyApi() {
         setFormSubmitted(true);
       });
 }
+// Function that handles a selected artist and its publishing info functionality
+function ArtistDetails({ artist, setSelectedAlbum }) {
+  const handlePublishButtonClick = () => {
+    const postInfo = {
+      albumArtist: artist.name,
+      albumImage: artist.images[0].url
+    };
+    console.log(postInfo);
+  }
+
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <Card>
+            <Card.Img variant="top" src={artist.images[0].url} />
+            <Card.Body>
+              <Card.Title></Card.Title>
+              <Card.Text class='text-dark'>
+                {artist.name}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <button onClick={handlePublishButtonClick}>Select this artist</button>
+        </Col>
+      </Row>
+    </Container>
+  )
+}
 
 
 // Function that handles a selected album and its publishing functionality
 function AlbumDetails({ album }) {
-    const [commentInput, setCommentInput] = useState("");
-    const [genre, setGenre] = useState("");
-
-    const handleCommentInputChange = (event) => {
-      setCommentInput(event.target.value);
-    }
-
     const handlePublishButtonClick = () => {
       const postInfo = {
         albumImage: album.images[0].url,
         albumName: album.name,
         albumArtist: `${searchInput}`,
-        comment: commentInput,
-        genre: genre
       };
       console.log(postInfo);
-      setCommentInput("");
       // Need to add a new function to redirect the user to the page where there post is published
     }
 
@@ -95,18 +115,7 @@ function AlbumDetails({ album }) {
                 </Card.Text>
               </Card.Body>
             </Card>
-            <input type="text" placeholder="Add a comment" value={commentInput} onChange={handleCommentInputChange} />
-            <div>
-              <select value={genre} onChange={(event) => setGenre(event.target.value)}>
-                <option value="">Select a thread location for your post</option>
-                <option value="Rock">Rock</option>
-                <option value="Hip Hop">Hip Hop</option>
-                <option value="Electronic">Electronic</option>
-                <option value="Country">Country</option>
-                <option value="Classical">Classical</option>
-              </select>
-            </div>
-            <button onClick={handlePublishButtonClick}>Publish</button>
+            <button onClick={handlePublishButtonClick}>Select this album</button>
           </Col>
         </Row>
       </Container>
@@ -138,16 +147,20 @@ function AlbumDetails({ album }) {
               </Button>
             </InputGroup>
           </Container>
+        {selectedArtist ? (
+          <ArtistDetails artist={selectedArtist} />
+        ) : (
           <Container>
             <Row className='mx-2 row row-cols-4'>
-              <Card>
+              <Card onClick={() => setSelectedArtist(artist)}>
                 {formSubmitted && <Card.Img src={artist.images[0].url}/>}
-                <Card.Body>
+                <Card.Body class='text-dark'>
                   <Card.Title>{artist.name}</Card.Title>
                 </Card.Body>
               </Card>
             </Row>
           </Container>
+          )}
           <Container>
             <Row className="mx-2 row row-cols-4">
               {albums.map( (album, i) => {
@@ -155,7 +168,7 @@ function AlbumDetails({ album }) {
                 return(
                   <Card key={i} onClick={() => setSelectedAlbum(album)}>
                     <Card.Img src={album.images[0].url} />
-                    <Card.Body>
+                    <Card.Body class='text-dark'>
                       <Card.Title>{album.name}</Card.Title>
                     </Card.Body>
                   </Card>
