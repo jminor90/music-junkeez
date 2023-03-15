@@ -60,13 +60,14 @@ function SpotifyApi() {
       });
 }
 // Function that handles a selected artist and its publishing info functionality
-function ArtistDetails({ artist, setSelectedAlbum }) {
+function ArtistDetails({ artist }) {
   const handlePublishButtonClick = () => {
     const postInfo = {
       albumArtist: artist.name,
       albumImage: artist.images[0].url
     };
     console.log(postInfo);
+    // This is where we need to insert a function that pushes spotifyApi info to database
   }
 
   return (
@@ -133,7 +134,7 @@ function AlbumDetails({ album }) {
           <Container>
             <InputGroup className="mb-3" size="lg">
               <FormControl
-                placeholder="Search For Artist"
+                placeholder="Search For Anything"
                 type="input"
                 onKeyPress={event => {
                   if (event.key == "Enter") {
@@ -142,7 +143,7 @@ function AlbumDetails({ album }) {
                 }}
                 onChange={event => setSearchInput(event.target.value)}
                 />
-              <Button onClick={search}>
+              <Button onClick={search} c>
                 Search
               </Button>
             </InputGroup>
@@ -150,16 +151,18 @@ function AlbumDetails({ album }) {
         {selectedArtist ? (
           <ArtistDetails artist={selectedArtist} />
         ) : (
-          <Container>
-            <Row className='mx-2 row row-cols-4'>
-              <Card onClick={() => setSelectedArtist(artist)}>
-                {formSubmitted && <Card.Img src={artist.images[0].url}/>}
-                <Card.Body class='text-dark'>
-                  <Card.Title>{artist.name}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Row>
-          </Container>
+          formSubmitted && (
+            <Container>
+              <Row className='mx-2 row row-cols-4'>
+                <Card onClick={() => setSelectedArtist(artist)}>
+                  {formSubmitted && <Card.Img src={artist.images[0].url}/>}
+                  <Card.Body class='text-dark'>
+                    <Card.Title>{artist.name}</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Row>
+            </Container>
+            )
           )}
           <Container>
             <Row className="mx-2 row row-cols-4">

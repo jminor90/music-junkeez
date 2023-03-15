@@ -1,4 +1,4 @@
-
+import { FaArrowDown } from "react-icons/fa";
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
@@ -15,20 +15,23 @@ function Profile() {
 
     return (
         <div>
-            <h1>Profile</h1>
     <main>
       <div className="flex-row justify-center">
 
-        <div className="col-12 col-md-8 mb-3">
           {loading ? (
             <div>Loading...</div>
           ) : (
+            <>
+            <div className="profileHeader">
+            <h5>My Threads &nbsp;</h5> <FaArrowDown className="faArrowDown"/>
+            </div>
             <MyThreads
               getMyPosts={getMyPosts}
               title="Some Feed for Thought(s)..."
             />
+            </>
           )}
-        </div>
+
       </div>
     </main>
         </div>
