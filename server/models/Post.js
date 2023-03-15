@@ -19,6 +19,28 @@ const PostSchema = new Schema({
     required: true,
     trim: true
   },
+  topic: {
+    type: String,
+    required: false
+  },
+
+  genreKeywords: {
+    type: [String]
+  },
+
+  albumReview: 
+    {
+      spotifyArtist: {
+        type: String
+      },
+      spotifyAlbumName: {
+        type: String
+      },
+      spotifyAlbumArt: {
+        type: String
+      },
+    },
+
   responses: [
     {
       responseText: {

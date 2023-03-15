@@ -20,6 +20,8 @@ import Profile from "./pages/Profile";
 import GenrePage from "./pages/Genre";
 import OffTopic from "./pages/OffTopic";
 import GeneralDiscussion from "./pages/GeneralDiscussion";
+// Added SpotifyAPI component
+import SpotifyApi from './components/spotifyAPI/spotify';
 
 // apollo test code
 

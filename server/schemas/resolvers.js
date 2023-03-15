@@ -29,11 +29,11 @@ const resolvers = {
   },
 
   Mutation: {
-    createPost: async (parent, {post:{title, description}}, context) => {
+    createPost: async (parent, {post:{title, description, topic, albumReview}}, context) => {
       if (context.user) {
         // const {title, description} = args.post //object descrutring from args.post
         const postAuthor = context.user.username
-        const post = new Post ({ title, description, postAuthor })
+        const post = new Post ({ title, description, postAuthor, topic, albumReview })
         await post.save()
         await User.findOneAndUpdate(
           {_id: context.user._id},

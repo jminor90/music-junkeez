@@ -1,5 +1,4 @@
-
-import './App.css';
+// import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, InputGroup, FormControl, Button, Row, Card, Col } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
@@ -9,10 +8,18 @@ const CLIENT_ID = "66511bd43321461caae45c7644ef2572";
 const CLIENT_SECRET = "561bf37ea1bb4312825fe6a6d1c81689";
 
 function SpotifyApi() {
-  const [searchInput, setSearchInput] = useState("");
-  const [accessToken, setAccessToken] = useState("");
-  const [albums, setAlbums] = useState([]);
-  const [selectedAlbum, setSelectedAlbum] = useState(null);
+    const [accessToken, setAccessToken] = useState("");
+    const [searchInput, setSearchInput] = useState("");
+    const [formSubmitted, setFormSubmitted] = useState(false);
+  
+    const [albums, setAlbums] = useState([]);
+    const [selectedAlbum, setSelectedAlbum] = useState(null);
+
+    // Need to add selectedArtist logic
+    const [artist, setArtist] = useState([]);
+
+    // Need to add tracks and selectedTrack logic
+    // const [tracks, setTracks] = useState([]);
 
   useEffect(() => {
     // API Access Token
@@ -30,7 +37,7 @@ function SpotifyApi() {
 
   // Search
 
-  async function search() {
+    async function search() {
     console.log("Search for " + searchInput);
 
     // Get request using search to get the Artist Id
@@ -41,21 +48,17 @@ function SpotifyApi() {
         'Authorization': 'Bearer ' + accessToken
       }
     }
-
-    let artistId = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + '&type=artist', searchParameters)
-      .then(response => response.json())
-      .then(data => { return data.artists.items[0].id })
-
-    console.log('Artist ID is ' + artistId);
-
-    let returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistId + '/albums' + '?include_groups=album&market=US&limit=20', searchParameters)
+    let searchResults = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + '&type=album,artist,track', searchParameters)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
-        setAlbums(data.items);
+        console.log(data);
+        setAlbums(data.albums.items);
+        console.log(data.artists.items[0].name)
+        setArtist(data.artists.items[0]);
+        setFormSubmitted(true);
       });
-  }
-  console.log(albums)
+}
+
 
 // Function that handles a selected album and its publishing functionality
 function AlbumDetails({ album }) {
@@ -134,6 +137,16 @@ function AlbumDetails({ album }) {
                 Search
               </Button>
             </InputGroup>
+          </Container>
+          <Container>
+            <Row className='mx-2 row row-cols-4'>
+              <Card>
+                {formSubmitted && <Card.Img src={artist.images[0].url}/>}
+                <Card.Body>
+                  <Card.Title>{artist.name}</Card.Title>
+                </Card.Body>
+              </Card>
+            </Row>
           </Container>
           <Container>
             <Row className="mx-2 row row-cols-4">

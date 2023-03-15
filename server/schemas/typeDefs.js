@@ -7,7 +7,16 @@ const typeDefs = gql`
     title: String
     description: String
     postAuthor: String
+    topic: String
+    genreKeywords: [String]
+    albumReview: albumReview
     responses: [Response]
+  }
+
+  type albumReview{
+    spotifyArtist: String
+    spotifyAlbumName: String
+    spotifyAlbumArt: String
   }
 
   type Response {
@@ -33,8 +42,15 @@ const typeDefs = gql`
   input PostInput {
     title: String
     description: String
+    topic: String
+    albumReview: albumReviewInput
   }
 
+  input albumReviewInput{
+    spotifyArtist: String
+    spotifyAlbumName: String
+    spotifyAlbumArt: String
+  }
 
   type Query {
     hello: String
