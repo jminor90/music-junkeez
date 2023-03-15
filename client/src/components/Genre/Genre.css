@@ -24,14 +24,62 @@
     margin-left: 40px !important;
     text-align: left;
     left: 35px;
+    margin-right: 40px !important;
     font-size: 13px;
 }
 
-.smallText h5 {
-    margin-left: 20px !important;
+.threadContainerFull {
+    width: 100%;
+    justify-content: center;
+}
+
+.profileComponentHeader {
+    display: flex;
+}
+
+.spanTitleContainer {
+    margin-top: 7px;
+    width: fit-content;
+    margin-left: 5px;
+    margin-right: 25px;
+
+}
+
+.spanTitle {
+    position: relative;
+    height: fit-content;
+    font-size: 17px;
+}
+
+.profileText h5 {
+    font-size: 19px !important;
+    color: rgb(224, 52, 152);
+    margin-top: 8px;
+    margin-left: 30px !important;
+    margin-right: 5px !important;
     text-align: left;
     left: 35px;
     font-size: 16px;
+}
+
+.smallText h5 {
+    font-size: 19px !important;
+    color: rgb(224, 52, 152);
+    margin-top: 8px;
+    margin-left: 35px !important;
+    margin-right: 30px !important;
+    text-align: left;
+    left: 35px;
+    font-size: 16px;
+}
+
+.profileElementContainer {
+    display: flex;
+    justify-content: left;
+}
+
+.faArrow {
+    color: rgb(224, 52, 152);
 }
 
 .smallText h6 {

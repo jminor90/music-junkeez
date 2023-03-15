@@ -25,6 +25,7 @@ export function LoginForm(props) {
 
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [validated] = useState(false);
+  const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {

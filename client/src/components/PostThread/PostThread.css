@@ -9,7 +9,8 @@
 }
 
 .threadTextLower {
-    margin-top: -6px;
+    padding-top: 0 !important;
+    margin-top: 2px;
     margin-left: 15px;
     position: relative;
     width: 100%;
