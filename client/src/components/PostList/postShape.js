@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PostShape = ({posts}) => {
 
@@ -8,26 +9,31 @@ const PostShape = ({posts}) => {
 
   return (
     <>
-    {
-      posts.map((posts)=> (
-        <div className="threadContainer">
-        <div className="smallText">
-        <h5>{posts.title}</h5>
-        <p>{posts.description}</p>
-        <p>{posts.genreKeywords}</p>
-        <h6>Topic: {posts.topic}</h6>
-        <h6>By:{posts.postAuthor}</h6>
-        <h6>On: {posts.createdAt}</h6>
-        <div id="spotifyData">
+      {
+        posts.map((posts) => (
+          <div className="threadContainer">
+            <div className="smallText">
+              <h5><Link
 
-        </div>
-      </div>
-        </div>
-        
-      )
+                to={`/individualThread/${posts._id}`}
+              >
+                {posts.title}
+              </Link></h5>
+              {/* <h5>{posts.title}</h5> */}
+              <p>{posts.description}</p>
+              <p>{posts.genreKeywords}</p>
+              <h6>Topic: {posts.topic}</h6>
+              <h6>By:{posts.postAuthor}</h6>
+              <h6>On: {posts.createdAt}</h6>
+              <div id="spotifyData">
+              </div>
+            </div>
+          </div>
 
-      )
-    },
+        )
+
+        )
+      },
     </>
 
   )
