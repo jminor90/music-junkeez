@@ -79,3 +79,27 @@ query getPostByUserID($getPostByUserIdId: ID) {
   }
 }
 `
+
+export const GET_POST_BY_ID = gql `
+query getPost($getPost: ID) {
+  getPost(id: $getPost) {
+    title
+    description
+    postAuthor
+    topic
+    createdAt
+    genreKeywords
+    albumReview {
+      spotifyArtist
+      spotifyAlbumName
+      spotifyAlbumArt
+    }
+    responses {
+      _id
+      responseText
+      responseAuthor
+      createdAt
+    }
+  }
+}
+`
