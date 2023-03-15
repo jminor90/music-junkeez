@@ -1,4 +1,4 @@
-import React from 'react';
+import "../Genre/Genre.css";
 
 const MyThreads = ({ getMyPosts }) => {
   if (!getMyPosts.length) {
@@ -6,18 +6,24 @@ const MyThreads = ({ getMyPosts }) => {
   }
 
   return (
-    <div>
+    <div className="threadContainerFull">
 
       {
         getMyPosts.map((posts) => (
           <div key={posts._id} className="threadContainer">
-            <h4 className="smallText">
-              {posts.Author}<br />
-              <span>
+            <div className="profileComponentHeader">
+            <div className="profileText">
+            <h5>Toony
+              {posts.Author} -</h5>
+              </div>
+              <div className="spanTitleContainer">
+              <span className="spanTitle">
                 {posts.title}
               </span>
-            </h4>
-            <div className="card-body bg-dark p-2">
+              </div>
+              </div>
+
+            <div className="profileElementContainer">
               <p>{posts.description}</p>
             </div>
           </div>

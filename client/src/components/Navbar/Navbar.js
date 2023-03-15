@@ -1,8 +1,12 @@
 import { FaSearch } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+import AuthService from '../../utils/auth';
+import { useState } from 'react';
 import "./Navbar.css";
 
         function Navbar() {
+            const [showModal, setShowModal] = useState(false);
 
             return (
                 <>
@@ -23,12 +27,22 @@ import "./Navbar.css";
 
                             </div>
                     </form>
+                    {AuthService.loggedIn() ? (
+                <>
+                <div className="logoutContainer">
+                <button className="logout">
+                  <Nav.Link onClick={AuthService.logout}>Logout</Nav.Link>
+                  </button>
+                  </div>
+                </>
+              ) :
 
-                    <div className="d-flex signinContainer">
+                    <div className="d-flex signinContainer" show={showModal}
+        onHide={() => setShowModal(false)}>
                     <Link to="/signin">
-                        <button className="signinBtn">Signup/Sign in</button>
+                        <button className="signinBtn" onClick={() => setShowModal(true)}>Signup/Sign in</button>
                         </Link>
-                    </div>
+                        </div>}
 
 
                 </div>

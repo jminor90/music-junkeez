@@ -15,7 +15,7 @@ const PostList = () => {
 
   return(
     <div className="flex-row justify-center">
-        <div className="col-12 col-md-8 mb-3">
+        <div>
           {/* If the data is still loading, render a loading message */}
           {loading ? (
             <div>Hey I'm Loadin' Here!...</div>
