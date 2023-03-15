@@ -83,9 +83,9 @@ function ArtistDetails({ artist, onGoBack }) {
           <Card>
             <Card.Img variant="top" src={artist.images[0].url} />
             <Card.Body class='text-dark'>
-              <Card.Title></Card.Title>
-              <Card.Text>
-                {artist.name}
+              <Card.Title>{artist.name}</Card.Title>
+              <Card.Text class='mb-2'>
+                {artist.followers.total} Spotify followers
               </Card.Text>
             </Card.Body>
           </Card>
