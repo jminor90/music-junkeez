@@ -17,7 +17,7 @@ const PostShape = ({posts}) => {
           <div className="threadContainer">
             <div className="smallText">
               <h5><Link
-
+                className="titleLink"
                 to={`/individualThread/${posts._id}`}
               >
                 {posts.title}

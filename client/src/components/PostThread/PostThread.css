@@ -65,9 +65,8 @@ ul.dropdown-menu.dropdownItems.show:hover {
 }
 
 .filterList {
-    position: relative;
     z-index: 2;
-    width: 150px;
+    width: fit-content;
     margin-left: 15px;
     border-bottom-left-radius: 25px;
     border-left: 1px solid rgb(224, 52, 152);
@@ -121,7 +120,7 @@ ul.dropdown-menu.dropdownItems.show:hover {
 }
 .threadTitleContainer {
     position: relative;
-    width: 100%;
+    width: 70%;
 }
 
 .threadTitle {

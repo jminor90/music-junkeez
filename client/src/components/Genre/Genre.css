@@ -33,6 +33,19 @@
     justify-content: center;
 }
 
+.titleLink {
+    font-size: 21px !important;
+    color: rgb(224, 52, 152);
+    text-decoration: none;
+}
+
+.threadContainer {
+    border: 1px solid rgb(61, 61, 61);
+    background: #181818;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+
 .profileComponentHeader {
     display: flex;
 }
@@ -206,9 +219,7 @@ input.commentText {
 
 .commentButton {
     font-weight: 500;
-    position: absolute;
-    bottom: 10px;
-    left: 47%;
+    margin-bottom: 5px;
 }
 
 .newThreadButtonContainer {
@@ -251,14 +262,5 @@ input.commentText {
 @media (max-width: 1000px) {
     .genreContainer {
         width: 80%;
-    }
-    .commentButton {
-        left: 46%;
-    }
-}
-
-@media (max-width: 700px) {
-    .commentButton {
-        left: 45%;
     }
 }

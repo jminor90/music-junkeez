@@ -107,6 +107,7 @@ span {
 }
 
 .commentContainer {
+    display: grid;
     position: relative;
     left: 2.5%;
     width: 95%;
@@ -135,6 +136,7 @@ span {
 }
 
 .commentButton {
+    justify-content: center;
     border-radius: 40px !important;
     padding: 8px 25px;
     color: white !important;
@@ -151,9 +153,9 @@ span {
 }
 
 .buttonContainer {
+    justify-content: center;
     width: 100%;
     position: relative;
-    right: 56%;
 }
 
 .commentsHeaderContainer {
@@ -167,41 +169,8 @@ span {
     font-weight: 500;
 }
 
-@media (max-width: 1500px) {
-    .buttonContainer {
-        right: 58%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .buttonContainer {
-        right: 60%;
-    }
-}
-
 @media (max-width: 1000px) {
     .genreContainer {
         width: 80%;
-    }
-    .buttonContainer {
-        right: 58%;
-    }
-}
-
-@media (max-width: 750px) {
-    .buttonContainer {
-        right: 60%;
-    }
-}
-
-@media (max-width: 600px) {
-    .buttonContainer {
-        right: 64%;
-    }
-}
-
-@media (max-width: 500px) {
-    .buttonContainer {
-        right: 66%;
     }
 }
