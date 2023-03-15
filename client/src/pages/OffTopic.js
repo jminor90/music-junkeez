@@ -4,6 +4,7 @@ import { FaRegCommentDots } from 'react-icons/fa';
 import { useState } from 'react';
 import PostThread from '../components/PostThread/PostThread.js';
 import "../components/Genre/Genre.css";
+import PostList from '../components/PostList/'
 
 function OffTopic() {
 
@@ -16,13 +17,13 @@ function OffTopic() {
         </div>
 
         { isToggled && <PostThread /> } 
-    <div className="threadContainer">
+        <PostList/>
+    {/* <div className="threadContainer">
         <div className="smallText">
             <p>-GenreType-</p>
             <h5>-ThreadTitle-</h5>
             <h6>-ThreadAuthor- -ThreadDate-</h6>
         </div>
-        
     <div className='thumbContainer'>
     <button className='thumbButton'><FaRegCommentDots className='commentNumberButton'/> #</button>
         <button className='thumbButton'>
@@ -50,7 +51,7 @@ function OffTopic() {
             <FaThumbsDown className='thumbsDown'/> #
         </button>
     </div>
-    </div>
+    </div> */}
 </div>
     );
 }

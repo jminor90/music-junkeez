@@ -13,7 +13,7 @@ const MyThreads = ({ getMyPosts }) => {
           <div key={posts._id} className="threadContainer">
             <div className="profileComponentHeader">
             <div className="profileText">
-            <h5>Toony
+            <h5>Username??
               {posts.Author} -</h5>
               </div>
               <div className="spanTitleContainer">
